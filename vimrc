@@ -15,6 +15,8 @@ set number
 
 set showcmd
 set foldmethod=marker
+set foldtext=v:folddashes.substitute(getline(v:foldstart),'/\\*\\\|\\*/\\\|{{{\\d\\=','','g')
+
 
 "------------------------------
 "Indent options
