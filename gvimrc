@@ -9,4 +9,4 @@ set guioptions-=L
 
 match Error '\%>80v.\+'
 
-set guifont=DejaVu\ Sans\ Mono\ 10
+set guifont=DejaVu\ Sans\ Mono\ 11
