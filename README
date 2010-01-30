@@ -1,0 +1,4 @@
+cd
+git clone git://github.com/cutwater/vim-config.git .vim
+cd .vim
+./install.sh

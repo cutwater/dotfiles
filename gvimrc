@@ -7,6 +7,6 @@ set guioptions-=R
 set guioptions-=l
 set guioptions-=L
 
-match Error '\%>80v.\+'
+match Error '\%>79v.\+'
 
-set guifont=DejaVu\ Sans\ Mono\ 10
+set guifont=DejaVu\ Sans\ Mono\ 11
