@@ -1,6 +1,5 @@
 
 colorscheme ir_black
-"set guioptions-=meTrRlL
 set guioptions-=m
 set guioptions-=e
 set guioptions-=T
