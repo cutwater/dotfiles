@@ -14,8 +14,8 @@ set background=dark
 set number
 
 set showcmd
-set foldmethod=marker
-set foldtext=v:folddashes.substitute(getline(v:foldstart),'/\\*\\\|\\*/\\\|{{{\\d\\=','','g')
+"set foldmethod=syntax
+"set foldtext=v:folddashes.substitute(getline(v:foldstart),'/\\*\\\|\\*/\\\|{{{\\d\\=','','g')
 
 
 "------------------------------
@@ -117,6 +117,23 @@ vmap <F3> <Esc>:nohlsearch<CR>
 
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
 
+" navigation by linebreaks
+nmap <silent> j gj
+nmap <silent> k gk
+
+nmap <silent> <Down> gj
+nmap <silent> <Up> gk
+
+"imap <silent> <Down> <C-o>gj
+"imap <silent> <Up> <C-o>gk
+
+
+" urxvt fix
+"map ^[Oc W
+"map ^[Od B
+"map! ^[Oc ^[Wa
+"map! ^[Od ^[Ba
+
 "------------------------------
 "Menu config
 "------------------------------
@@ -164,4 +181,3 @@ au BufRead,BufNewFile *.mako set filetype=html
 
 " Remove trailing spaces
 au BufWritePre * :%s/\s\+$//e
-
