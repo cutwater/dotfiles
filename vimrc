@@ -65,7 +65,9 @@ set history=100
 "set backup
 "set backupcopy=yes
 "set backupdir=$HOME/.vim/backup,.
-set directory=$HOME/.vim/swap,.
+"set directory=$HOME/.vim/swap,.
+set nobackup
+set noswapfile
 
 "------------------------------
 "Encodings
@@ -82,6 +84,15 @@ set completeopt=menu
 "------------------------------
 set winminwidth=0
 set winminheight=0
+
+"------------------------------
+" Whitespaces
+"------------------------------
+
+set list
+set listchars=tab:»·
+set listchars+=trail:·
+set endofline
 
 "------------------------------
 "Other options
