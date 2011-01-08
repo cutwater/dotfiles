@@ -4,3 +4,6 @@
 [submodule "bundle/bufexplorer"]
 	path = bundle/bufexplorer
 	url = http://github.com/vim-scripts/bufexplorer.zip.git
+[submodule "bundle/liquidcarbon"]
+	path = bundle/liquidcarbon
+	url = https://github.com/vim-scripts/Liquid-Carbon.git
