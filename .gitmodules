@@ -1,3 +1,6 @@
 [submodule "bundle/NERD_tree"]
 	path = bundle/NERD_tree
 	url = http://github.com/vim-scripts/The-NERD-tree.git
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = http://github.com/vim-scripts/bufexplorer.zip.git
