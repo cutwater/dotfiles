@@ -16,9 +16,6 @@ set background=dark
 set number
 
 set showcmd
-"set foldmethod=syntax
-"set foldtext=v:folddashes.substitute(getline(v:foldstart),'/\\*\\\|\\*/\\\|{{{\\d\\=','','g')
-
 
 "------------------------------
 "Indent options
@@ -64,10 +61,6 @@ set history=100
 "------------------------------
 "Backup and swap
 "------------------------------
-"set backup
-"set backupcopy=yes
-"set backupdir=$HOME/.vim/backup,.
-"set directory=$HOME/.vim/swap,.
 set nobackup
 set noswapfile
 
@@ -88,15 +81,6 @@ set winminwidth=0
 set winminheight=0
 
 "------------------------------
-" Whitespaces
-"------------------------------
-
-"set list
-"set listchars=tab:»·
-"set listchars+=trail:·
-"set endofline
-
-"------------------------------
 "Other options
 "------------------------------
 set mouse=a
@@ -111,18 +95,6 @@ set mouse=a
 "Hotkey maps
 "------------------------------
 imap <Ins> <Esc>i
-"inoremap <Nul> <C-X><C-O>
-
-"inoremap <C-Space> <C-X><C-O>
-"imap <C-@> <C-Space>
-
-"map <F2> :TlistToggle<CR>
-"imap <F2> <Esc>:TlistToggle<CR>
-"vmap <F2> <Esc>:TlistToggle<CR>
-
-"map <C-F2> :MarksBrowser<CR>
-"imap <C-F2> <Esc>:MarksBrowser<CR>
-"vmap <C-F2> <Esc>:MarksBrowser<CR>
 
 nmap <F3> :nohlsearch<CR>
 imap <F3> <Esc>:nohlsearch<CR>
@@ -136,9 +108,6 @@ nmap <silent> k gk
 
 nmap <silent> <Down> gj
 nmap <silent> <Up> gk
-
-"imap <silent> <Down> <C-o>gj
-"imap <silent> <Up> <C-o>gk
 
 
 "------------------------------
@@ -164,9 +133,6 @@ menu Encoding.Endline.DOS :set fileformat=dos<CR>
 menu Encoding.Endline.MAC :set fileformat=mac<CR>
 map <C-F7> :emenu Encoding.Endline.<Tab>
 
-"menu Textwidth.off :set textwidth=0<CR>
-"menu Textwidth.on :set textwidth=80<CR>
-
 "------------------------------
 "Enable plugins
 "------------------------------
@@ -178,13 +144,7 @@ au BufRead,BufNewFile *.phtml set filetype=php
 
 au BufRead,BufNewFile *.wsgi set filetype=python
 
-"au BufRead,BufNewFile SConstruct set filetype=python
-"au BufRead,BufNewFile SConscript set filetype=python
-
 au BufRead,BufNewFile *.mako set filetype=html
-
-"au BufWinEnter * let w:m1=matchadd('Search', '\%<81v.\%>77v', -1)
-"au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 
 " Remove trailing spaces
 au BufWritePre * :%s/\s\+$//e
