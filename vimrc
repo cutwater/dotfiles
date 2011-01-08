@@ -89,10 +89,10 @@ set winminheight=0
 " Whitespaces
 "------------------------------
 
-set list
-set listchars=tab:»·
-set listchars+=trail:·
-set endofline
+"set list
+"set listchars=tab:»·
+"set listchars+=trail:·
+"set endofline
 
 "------------------------------
 "Other options
