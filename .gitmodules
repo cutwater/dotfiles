@@ -1,0 +1,3 @@
+[submodule "bundles/NERD_tree"]
+	path = bundles/NERD_tree
+	url = http://github.com/vim-scripts/The-NERD-tree.git
