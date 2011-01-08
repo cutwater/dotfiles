@@ -141,12 +141,6 @@ nmap <silent> <Up> gk
 "imap <silent> <Up> <C-o>gk
 
 
-" urxvt fix
-"map ^[Oc W
-"map ^[Od B
-"map! ^[Oc ^[Wa
-"map! ^[Od ^[Ba
-
 "------------------------------
 "Menu config
 "------------------------------

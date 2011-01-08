@@ -1,5 +1,6 @@
 
-colorscheme ir_black
+"colorscheme ir_black
+colorscheme liquidcarbon
 set guioptions-=m
 set guioptions-=e
 set guioptions-=T
