@@ -1,0 +1,6 @@
+# vim: ft=zsh
+
+autoload -U colors && colors
+
+PS1=$'%B%F{6}[%n%F{1}@%M%F{6} %1~]%f%b%# '
+
