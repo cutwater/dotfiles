@@ -1,6 +1,14 @@
 # vim: ft=zsh
 
+autoload -Uz vcs_info
 autoload -U colors && colors
 
-PS1=$'%B%F{6}[%n%F{1}@%M%F{6} %1~]%f%b%# '
+precmd() {
+    psvar=()
+
+    vcs_info
+    [[ -n $vcs_info_msg_0_ ]] && psvar[1]="$vcs_info_msg_0_"
+}
+
+PS1=$'%B%F{6}[%n%F{1}@%M%F{6} %1~]%F{2}%1v%f%b%# '
 
