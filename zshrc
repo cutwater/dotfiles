@@ -4,3 +4,4 @@
 . ~/.zsh/aliases
 . ~/.zsh/completion
 . ~/.zsh/prompt
+. ~/.zsh/bindings
