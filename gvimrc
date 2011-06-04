@@ -9,7 +9,8 @@ set guioptions-=R
 set guioptions-=l
 set guioptions-=L
 
-"match Error '\%>80v.\+'
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
 
 set guifont=DejaVu\ Sans\ Mono\ 10
 
