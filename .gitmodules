@@ -7,3 +7,6 @@
 [submodule "bundle/liquidcarbon"]
 	path = bundle/liquidcarbon
 	url = https://github.com/vim-scripts/Liquid-Carbon.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = https://github.com/vim-scripts/ctrlp.vim.git
