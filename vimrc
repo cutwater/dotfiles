@@ -147,3 +147,5 @@ au BufRead,BufNewFile *.mako set filetype=html
 
 " Remove trailing spaces
 au BufWritePre * :%s/\s\+$//e
+
+set wildignore+=.*
