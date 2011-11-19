@@ -149,3 +149,5 @@ au BufRead,BufNewFile *.mako set filetype=html
 au BufWritePre * :%s/\s\+$//e
 
 set wildignore+=.*
+
+let g:tex_flavor='latex'
