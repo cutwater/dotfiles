@@ -150,4 +150,9 @@ au BufWritePre * :%s/\s\+$//e
 
 set wildignore+=.*
 
-let g:tex_flavor='latex'
+let g:Tex_Flavor='latex'
+"let g:Tex_Outdir='build'
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_ViewRule_pdf='okular'
+"let g:Tex_CompileRule_pdf='cd '.g:Tex_Outdir.' & make'
+
