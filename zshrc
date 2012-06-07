@@ -5,3 +5,6 @@
 . ~/.zsh/completion
 . ~/.zsh/prompt
 . ~/.zsh/bindings
+
+[ -f "~/.zsh/local" ] && ( . "~/.zsh/local" )
+
