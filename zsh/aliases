@@ -9,3 +9,10 @@ alias l='ls -lAh'
 alias ll='ls -l'
 alias la='ls -A'
 
+# Global aliases
+alias -g NO='&> /dev/null'
+alias -g NE='2> /dev/null'
+
+alias -g HE='2>>( sed -e "s/.*/$fg_bold[red]&$reset_color/" 1>&2 )' # Highlight errors
+
+alias -g X='| xargs'
