@@ -1,4 +1,10 @@
+# vim: ft=zsh
+
 if [[ "$TERM" == "xterm" ]] then
     bindkey ";5D" emacs-backward-word
     bindkey ";5C" emacs-forward-word
+fi
+
+if [[ "$TERM" == "screen" ]] then
+    bindkey '^R' history-incremental-search-backward
 fi
