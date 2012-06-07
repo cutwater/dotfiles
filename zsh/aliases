@@ -9,3 +9,6 @@ alias l='ls -lAh'
 alias ll='ls -l'
 alias la='ls -A'
 
+# git
+alias gci='git commit'
+alias gst='git status'
