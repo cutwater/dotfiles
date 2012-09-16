@@ -1,5 +1,3 @@
-
-"colorscheme ir_black
 colorscheme liquidcarbon
 set guioptions-=m
 set guioptions-=e
@@ -10,7 +8,7 @@ set guioptions-=l
 set guioptions-=L
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+"match OverLength /\%81v.\+/
 
 set guifont=DejaVu\ Sans\ Mono\ 10
 
