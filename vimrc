@@ -1,6 +1,24 @@
 set nocompatible
+filetype off
 
-call pathogen#runtime_append_all_bundles()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'Rip-Rip/clang_complete'
+Bundle 'vim-scripts/ctrlp.vim'
+Bundle 'vim-scripts/Liquid-Carbon'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'majutsushi/tagbar'
+Bundle 'tpope/vim-fugitive'
+
+"------------------------------
+"Enable plugins
+"------------------------------
+filetype indent on
+filetype plugin on
 
 "------------------------------
 "Common settings
@@ -131,13 +149,6 @@ nmap <silent> <Up> gk
 "menu Encoding.Endline.DOS :set fileformat=dos<CR>
 "menu Encoding.Endline.MAC :set fileformat=mac<CR>
 "map <C-F7> :emenu Encoding.Endline.<Tab>
-
-"------------------------------
-"Enable plugins
-"------------------------------
-filetype indent on
-filetype plugin on
-
 au BufRead,BufNewFile *.phps set filetype=php
 au BufRead,BufNewFile *.phtml set filetype=php
 
