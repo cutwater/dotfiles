@@ -137,9 +137,14 @@ au BufWritePre * :%s/\s\+$//e
 
 set wildignore+=.*
 
-let g:Tex_Flavor='latex'
-"let g:Tex_Outdir='build'
-let g:Tex_DefaultTargetFormat='pdf'
-let g:Tex_ViewRule_pdf='okular'
-"let g:Tex_CompileRule_pdf='cd '.g:Tex_Outdir.' & make'
+"let g:Tex_Flavor='latex'
+""let g:Tex_Outdir='build'
+"let g:Tex_DefaultTargetFormat='pdf'
+"let g:Tex_ViewRule_pdf='okular'
+""let g:Tex_CompileRule_pdf='cd '.g:Tex_Outdir.' & make'
 
+" clang complete
+
+let g:clang_debug=1
+let g:clang_use_library=1
+let g:clang_library_path="/usr/lib/llvm"
