@@ -127,33 +127,9 @@ nmap <silent> k gk
 nmap <silent> <Down> gj
 nmap <silent> <Up> gk
 
-"------------------------------
-"Menu config
-"------------------------------
-"set wildmenu
-"set wcm=<Tab>
-"
-"menu Encoding.Read.UTF-8 :e ++enc=utf-8<CR>
-"menu Encoding.Read.CP1251 :e ++enc=cp1251<CR>
-"menu Encoding.Read.KOI8-R :e ++enc=koi8-r<CR>
-"menu Encoding.Read.CP8666 :e ++enc=cp866<CR>
-"map <F7> :emenu Encoding.Read.<Tab>
-"
-"menu Encoding.Write.UTF-8 :set fenc=utf-8<CR>
-"menu Encoding.Write.CP1251 :set fenc=cp1251<CR>
-"menu Encoding.Write.KOI8-R :set fenc=koi8-r<CR>
-"menu Encoding.Write.CP8666 :set fenc=cp866<CR>
-"map <S-F7> :emenu Encoding.Write.<Tab>
-"
-"menu Encoding.Endline.UNIX :set fileformat=unix<CR>
-"menu Encoding.Endline.DOS :set fileformat=dos<CR>
-"menu Encoding.Endline.MAC :set fileformat=mac<CR>
-"map <C-F7> :emenu Encoding.Endline.<Tab>
 au BufRead,BufNewFile *.phps set filetype=php
 au BufRead,BufNewFile *.phtml set filetype=php
-
 au BufRead,BufNewFile *.wsgi set filetype=python
-
 au BufRead,BufNewFile *.mako set filetype=html
 
 " Remove trailing spaces
