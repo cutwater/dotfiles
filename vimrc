@@ -14,6 +14,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
 
+Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
+
 "------------------------------
 "Enable plugins
 "------------------------------
