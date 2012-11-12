@@ -6,7 +6,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'Rip-Rip/clang_complete'
+"Bundle 'Rip-Rip/clang_complete'
 Bundle 'vim-scripts/ctrlp.vim'
 Bundle 'vim-scripts/Liquid-Carbon'
 Bundle 'scrooloose/nerdcommenter'
@@ -145,6 +145,6 @@ set wildignore+=.*
 
 " clang complete
 
-let g:clang_debug=1
-let g:clang_use_library=1
-let g:clang_library_path="/usr/lib/llvm"
+"let g:clang_debug=1
+"let g:clang_use_library=1
+"let g:clang_library_path="/usr/lib/llvm"
