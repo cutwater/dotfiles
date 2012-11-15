@@ -11,7 +11,7 @@ Bundle 'vim-scripts/ctrlp.vim'
 Bundle 'vim-scripts/Liquid-Carbon'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
-Bundle 'majutsushi/tagbar'
+"Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
 
 Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
@@ -70,13 +70,16 @@ set linebreak
 set whichwrap+=<,>,[,]
 set backspace=indent,eol,start
 
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+
 "------------------------------
 "Status line
 "------------------------------
 set laststatus=2
 set statusline=%<%f%y%m%r\ %{&encoding},%{&ff}\ %l,%c%V/%L\ %P
 
-set history=100
+set history=1000
 
 "------------------------------
 "Backup and swap
