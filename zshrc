@@ -6,5 +6,5 @@
 . ~/.zsh/prompt
 . ~/.zsh/bindings
 
-[ -f "~/.zsh/local" ] && ( . "~/.zsh/local" )
+[ -f "$HOME/.zsh/local" ] && . "$HOME/.zsh/local"
 
