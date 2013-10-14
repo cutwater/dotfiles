@@ -14,7 +14,7 @@ Bundle 'scrooloose/nerdtree'
 "Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
 
-Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
+"Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 
 "------------------------------
 "Enable plugins
@@ -162,7 +162,7 @@ set wildignore+=.*
 "let g:clang_use_library=1
 "let g:clang_library_path="/usr/lib/llvm"
 
-let g:Tex_SmartKeyBS = 0
-let g:Tex_SmartKeyQuote = 0
-let g:Tex_SmartKeyDot = 0
-let g:Imap_UsePlaceHolders = 0
+"let g:Tex_SmartKeyBS = 0
+"let g:Tex_SmartKeyQuote = 0
+"let g:Tex_SmartKeyDot = 0
+"let g:Imap_UsePlaceHolders = 0
