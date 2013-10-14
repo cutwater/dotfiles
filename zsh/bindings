@@ -15,14 +15,8 @@ bindkey "\e[6~" end-of-history # PageDown
 bindkey "\e[H" beginning-of-line
 bindkey "\e[F" end-of-line
 
-if [[ "$TERM" == "xterm" ]] then
-    bindkey "^[[1;5D" backward-word
-    bindkey "^[[1;5C" forward-word
-else
-    bindkey "^[OD" backward-word
-    bindkey "^[OC" forward-word
-fi
-
+bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" forward-word
 
 bindkey "\e[3~" delete-char
 
