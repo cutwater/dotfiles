@@ -132,6 +132,14 @@ nmap <silent> k gk
 nmap <silent> <Down> gj
 nmap <silent> <Up> gk
 
+if &term =~ '^screen'
+    " tmux will send xterm-style keys when its xterm-keys option is on
+    execute "set <xUp>=\e[1;*A"
+    execute "set <xDown>=\e[1;*B"
+    execute "set <xRight>=\e[1;*C"
+    execute "set <xLeft>=\e[1;*D"
+endif
+
 au BufRead,BufNewFile *.phps set filetype=php
 au BufRead,BufNewFile *.phtml set filetype=php
 au BufRead,BufNewFile *.wsgi set filetype=python
@@ -153,3 +161,8 @@ set wildignore+=.*
 "let g:clang_debug=1
 "let g:clang_use_library=1
 "let g:clang_library_path="/usr/lib/llvm"
+
+let g:Tex_SmartKeyBS = 0
+let g:Tex_SmartKeyQuote = 0
+let g:Tex_SmartKeyDot = 0
+let g:Imap_UsePlaceHolders = 0
