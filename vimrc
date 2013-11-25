@@ -4,17 +4,38 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+
 Bundle 'gmarik/vundle'
 
 "Bundle 'Rip-Rip/clang_complete'
-Bundle 'vim-scripts/ctrlp.vim'
+"Bundle 'vim-scripts/ctrlp.vim'
 Bundle 'vim-scripts/Liquid-Carbon'
-Bundle 'scrooloose/nerdcommenter'
+"Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 "Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
 
-Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
+"Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
+
+
+
+if has('gui_running')
+    colorscheme liquidcarbon
+    set guioptions-=a
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
+    set guioptions-=m
+    set guioptions-=e
+    set guioptions-=T
+    set guioptions-=r
+    set guioptions-=R
+    set guioptions-=l
+    set guioptions-=L
+
+    set rtp+=/home/cutwater/.local/lib/python2.7/site-packages/powerline/bindings/vim
+    python from powerline.vim import setup as powerline_setup
+    python powerline_setup()
+    python del powerline_setup
+endif
 
 "------------------------------
 "Enable plugins
@@ -132,6 +153,14 @@ nmap <silent> k gk
 nmap <silent> <Down> gj
 nmap <silent> <Up> gk
 
+if &term =~ '^screen'
+    " tmux will send xterm-style keys when its xterm-keys option is on
+    execute "set <xUp>=\e[1;*A"
+    execute "set <xDown>=\e[1;*B"
+    execute "set <xRight>=\e[1;*C"
+    execute "set <xLeft>=\e[1;*D"
+endif
+
 au BufRead,BufNewFile *.phps set filetype=php
 au BufRead,BufNewFile *.phtml set filetype=php
 au BufRead,BufNewFile *.wsgi set filetype=python
@@ -153,3 +182,8 @@ set wildignore+=.*
 "let g:clang_debug=1
 "let g:clang_use_library=1
 "let g:clang_library_path="/usr/lib/llvm"
+
+let g:Tex_SmartKeyBS = 0
+let g:Tex_SmartKeyQuote = 0
+let g:Tex_SmartKeyDot = 0
+let g:Imap_UsePlaceHolders = 0
