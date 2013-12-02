@@ -3,6 +3,8 @@
 export EDITOR=vim
 export PAGER=less
 
+. "$HOME/.zsh/platform"
+
 if [ -f "$HOME/.dircolors" ]; then
     source "$HOME/.dircolors"
 fi
@@ -22,6 +24,7 @@ fi
 if [[ "$PLATFORM" == 'linux' ]]; then
     export LANG=en_US.UTF-8
     export LANGUAGE=en_US:en
+elif [[ "$PLATFORM" == 'macos' ]]; then
     export LSCOLORS=GxFxCxDxBxegedabagaced
 fi
 

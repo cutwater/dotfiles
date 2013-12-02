@@ -1,6 +1,5 @@
 # vim: ft=zsh
 
-. "$HOME/.zsh/platform"
 . "$HOME/.zsh/config"
 . "$HOME/.zsh/aliases"
 . "$HOME/.zsh/completion"
