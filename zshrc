@@ -8,3 +8,4 @@
 
 [ -f "$HOME/.zsh/local" ] && . "$HOME/.zsh/local"
 
+. "$HOME/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh"
