@@ -1,14 +1,26 @@
 # vim: ft=zsh
 
-bindkey "\e[5~" beginning-of-history # PageUp
-bindkey "\e[6~" end-of-history # PageDown
+if [[ "$PLATFORM" == 'macos' ]]; then
+    bindkey "^[b" backward-word
+    bindkey "^[f" forward-word
 
-bindkey "\e[H" beginning-of-line
-bindkey "\e[F" end-of-line
+    bindkey "^[[H" beginning-of-line
+    bindkey "^[[F" end-of-line
 
-bindkey "^[[1;5D" backward-word
-bindkey "^[[1;5C" forward-word
+    bindkey "^[[3~" delete-char
 
-bindkey "\e[3~" delete-char
+    bindkey "^R" history-incremental-search-backward
+elif [[ "$PLATFORM" == 'linux' ]]; then
+    bindkey "\e[5~" beginning-of-history # PageUp
+    bindkey "\e[6~" end-of-history # PageDown
 
-bindkey '^R' history-incremental-search-backward
+    bindkey "\e[H" beginning-of-line
+    bindkey "\e[F" end-of-line
+
+    bindkey "^[[1;5D" backward-word
+    bindkey "^[[1;5C" forward-word
+
+    bindkey "\e[3~" delete-char
+
+    bindkey '^R' history-incremental-search-backward
+fi

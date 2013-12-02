@@ -10,7 +10,7 @@ precmd() {
     [[ -n $vcs_info_msg_0_ ]] && psvar[1]="$vcs_info_msg_0_"
 }
 
-PS1=$'%B%F{6}[%n%F{1}@%M%F{6} %1~]%F{2}%1v%f%b%# '
+PS1=$'%B%F{6}[%n%F{1}@%m%F{6} %1~]%F{2}%1v%f%b%# '
 
 local powerline_zsh="$HOME/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh"
 if [[ -f "$powerline_zsh" ]]; then

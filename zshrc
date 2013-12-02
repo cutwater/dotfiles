@@ -1,10 +1,10 @@
 # vim: ft=zsh
 
-. ~/.zsh/config
-. ~/.zsh/aliases
-. ~/.zsh/completion
-. ~/.zsh/prompt
-. ~/.zsh/bindings
+. "$HOME/.zsh/platform"
+. "$HOME/.zsh/config"
+. "$HOME/.zsh/aliases"
+. "$HOME/.zsh/completion"
+. "$HOME/.zsh/prompt"
+. "$HOME/.zsh/bindings"
 
 [ -f "$HOME/.zsh/local" ] && . "$HOME/.zsh/local"
-
