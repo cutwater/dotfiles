@@ -4,13 +4,13 @@
 alias ..='cd ..'
 
 # ls
-alias ls='ls -F --color=auto'
-alias l='ls -lAh'
+alias ls='ls -G'
+#alias l='ls -lAh'
 alias ll='ls -l'
-alias la='ls -A'
+#alias la='ls -A'
 
 # git
-alias gci='git commit'
+#alias gci='git commit'
 alias gst='git status'
 
 # Global aliases
