@@ -23,6 +23,7 @@ fi
 
 if [[ "$PLATFORM" == 'linux' ]]; then
     export LANG=en_US.UTF-8
+    export LC_ALL=en_US.UTF-8
     export LANGUAGE=en_US:en
 elif [[ "$PLATFORM" == 'macos' ]]; then
     export LSCOLORS=GxFxCxDxBxegedabagaced
