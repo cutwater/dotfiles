@@ -4,10 +4,11 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
+
 Bundle 'gmarik/vundle'
 
 "Bundle 'Rip-Rip/clang_complete'
-Bundle 'vim-scripts/ctrlp.vim'
+"Bundle 'vim-scripts/ctrlp.vim'
 Bundle 'vim-scripts/Liquid-Carbon'
 "Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
@@ -15,6 +16,24 @@ Bundle 'scrooloose/nerdtree'
 "Bundle 'tpope/vim-fugitive'
 
 "Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
+
+if has('gui_running')
+    colorscheme liquidcarbon
+    set guioptions-=a
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
+    set guioptions-=m
+    set guioptions-=e
+    set guioptions-=T
+    set guioptions-=r
+    set guioptions-=R
+    set guioptions-=l
+    set guioptions-=L
+
+    set rtp+=/home/cutwater/.local/lib/python2.7/site-packages/powerline/bindings/vim
+    python from powerline.vim import setup as powerline_setup
+    python powerline_setup()
+    python del powerline_setup
+endif
 
 "------------------------------
 "Enable plugins
