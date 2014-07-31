@@ -1,8 +1,9 @@
 # vim: ft=zsh
 
 if [[ "$PLATFORM" == 'macos' ]]; then
-    bindkey "^[b" backward-word
-    bindkey "^[f" forward-word
+    bindkey "^[[1;9D" backward-word
+    bindkey "^[[1;9C" forward-word
+
 
     bindkey "^[[H" beginning-of-line
     bindkey "^[[F" end-of-line
