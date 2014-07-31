@@ -10,7 +10,7 @@ if [ -f "$HOME/.dircolors" ]; then
 fi
 
 if [[ "$PLATFORM" == 'macos' ]]; then
-    export PATH="/usr/local/bin:$PATH"
+    export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 fi
 
 if [[ -d "$HOME/usr/bin" ]]; then
