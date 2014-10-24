@@ -3,6 +3,9 @@
 autoload -Uz vcs_info
 autoload -U colors && colors
 
+zstyle ':vcs_info:*' enable git hg
+zstyle ':vcs_info:*' formats " (%s:%b)%u%c "
+
 precmd() {
     psvar=()
 
@@ -10,4 +13,22 @@ precmd() {
     [[ -n $vcs_info_msg_0_ ]] && psvar[1]="$vcs_info_msg_0_"
 }
 
+# HELP:
+# Prompt Escapes:
+# %B (%b) - start bold mode
+# %F (%f) - start (stop) using different foreground color
+#
+# Colors:
+# 0     black
+# 1     red
+# 2     green
+# 3     yellow
+# 4     blue
+# 5     magenta
+# 6     cyan
+# 7     white
+#
+# $1v - value of the first element of psvar array parameter
+
 PS1=$'%B%F{6}[%n%F{1}@%m%F{6} %1~]%F{2}%1v%f%b%# '
+
