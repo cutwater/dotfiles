@@ -2,14 +2,16 @@ set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
 
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
-Bundle 'vim-scripts/ctrlp.vim'
-Bundle 'vim-scripts/Liquid-Carbon'
-Bundle 'scrooloose/nerdtree'
+Plugin 'vim-scripts/ctrlp.vim'
+Plugin 'vim-scripts/Liquid-Carbon'
+Plugin 'scrooloose/nerdtree'
+
+call vundle#end()
 
 "Bundle 'majutsushi/tagbar'
 "Bundle 'tpope/vim-fugitive'
