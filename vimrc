@@ -19,19 +19,6 @@ call vundle#end()
 "Bundle 'scrooloose/nerdcommenter'
 "Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 
-if has('gui_running')
-    colorscheme liquidcarbon
-    set guioptions-=a
-    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
-    set guioptions-=m
-    set guioptions-=e
-    set guioptions-=T
-    set guioptions-=r
-    set guioptions-=R
-    set guioptions-=l
-    set guioptions-=L
-endif
-
 "------------------------------
 "Enable plugins
 "------------------------------
