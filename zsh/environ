@@ -1,0 +1,53 @@
+# vim: ft=zsh
+
+export EDITOR=vim
+export PAGER=less
+
+source "$HOME/.zsh/platform"
+
+PATH_DIRS=(
+"/opt/bin"
+"$HOME/usr/bin"
+)
+
+# Setup NodeJS NPM env vars
+# NPM install global packages into user directory
+NPM_PACKAGES="$HOME/.npm-packages"
+if [[ -d "$NPM_PACKAGES" ]]; then
+    PATH_DIRS=("$NPM_PACKAGES/bin" $PATH_DIRS)
+    export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+fi
+
+# Setup ruby RVM env vars
+RVM_DIR="$HOME/.rvm"
+if [[ -d "$RVM_DIR" ]]; then
+    PATH_DIRS=("$RVM_DIR" $PATH_DIRS)
+    source "$RVM_DIR/scripts/rvm"
+fi
+
+# Setup dir colors
+if [ -f "$HOME/.dircolors" ]; then
+    eval "$(dircolors -b $HOME/.dircolors)"
+fi
+
+if [[ "$PLATFORM" == 'macos' ]]; then
+    PATH_DIRS=("/usr/local/bin" $PATH_DIRS)
+    export LSCOLORS=GxFxCxDxBxegedabagaced
+fi
+
+if [[ "$PLATFORM" == 'linux' ]]; then
+    export LANG=en_US.UTF-8
+    export LC_ALL=en_US.UTF-8
+    export LANGUAGE=en_US:en
+fi
+
+# Add PATH_DIRS to PATH
+for path_dir in $PATH_DIRS; do
+    if [[ -d "$path_dir" ]]; then
+        PATH="$path_dir:$PATH"
+    fi
+done
+export PATH
+
+# Enable Java anti-aliasing
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
