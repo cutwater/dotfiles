@@ -14,8 +14,13 @@ elif [[ "$PLATFORM" == 'linux' ]]; then
     bindkey "\e[5~" beginning-of-history # PageUp
     bindkey "\e[6~" end-of-history # PageDown
 
-    bindkey "\e[H" beginning-of-line
-    bindkey "\e[F" end-of-line
+    if [[ "$TERM" == 'linux' ]]; then
+        bindkey "\e[1~" beginning-of-line
+        bindkey "\e[4~" end-of-line
+    else
+        bindkey "\e[H" beginning-of-line
+        bindkey "\e[F" end-of-line
+    fi
 
     bindkey "^[[1;5D" backward-word
     bindkey "^[[1;5C" forward-word
