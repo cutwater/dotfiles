@@ -3,12 +3,7 @@
 export EDITOR=vim
 export PAGER=less
 
-source "$HOME/.zsh/platform"
-
-PATH_DIRS=(
-"/opt/bin"
-"$HOME/usr/bin"
-)
+PATH_DIRS=()
 
 # Setup NodeJS NPM env vars
 # NPM install global packages into user directory
@@ -39,6 +34,7 @@ if [[ "$PLATFORM" == 'linux' ]]; then
     export LANG=en_US.UTF-8
     export LC_ALL=en_US.UTF-8
     export LANGUAGE=en_US:en
+    PATH_DIRS+=("/opt/bin", "$HOME/usr/bin")
 fi
 
 # Add PATH_DIRS to PATH
