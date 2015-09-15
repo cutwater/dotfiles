@@ -13,6 +13,12 @@ precmd() {
     [[ -n $vcs_info_msg_0_ ]] && psvar[1]="$vcs_info_msg_0_"
 }
 
+if [[ -z "$SSH_CLIENT" ]]; then
+    prompt_host=%F{1}
+else
+    prompt_host=%F{3}
+fi
+
 # HELP:
 # Prompt Escapes:
 # %B (%b) - start bold mode
@@ -30,5 +36,5 @@ precmd() {
 #
 # $1v - value of the first element of psvar array parameter
 
-PS1=$'%B%F{6}[%n%F{1}@%m%F{6} %1~]%F{2}%1v%f%b%# '
+PS1="%B%F{6}[%n${prompt_host}@%m%F{6} %1~]%F{2}%1v%f%b%# "
 
