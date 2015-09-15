@@ -11,4 +11,3 @@ case $(uname) in
         ;;
 esac
 
-export PLATFORM
