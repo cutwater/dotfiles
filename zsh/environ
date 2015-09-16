@@ -7,11 +7,11 @@ PATH_DIRS=()
 
 # Setup NodeJS NPM env vars
 # NPM install global packages into user directory
-NPM_PACKAGES="$HOME/.npm-packages"
-if [[ -d "$NPM_PACKAGES" ]]; then
-    PATH_DIRS=("$NPM_PACKAGES/bin" $PATH_DIRS)
-    export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-fi
+#NPM_PACKAGES="$HOME/.npm-packages"
+#if [[ -d "$NPM_PACKAGES" ]]; then
+#    PATH_DIRS=("$NPM_PACKAGES/bin" $PATH_DIRS)
+#    export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+#fi
 
 # Setup ruby RVM env vars
 RVM_DIR="$HOME/.rvm"
