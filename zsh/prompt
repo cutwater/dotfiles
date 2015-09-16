@@ -1,24 +1,5 @@
 # vim: ft=zsh
 
-autoload -Uz vcs_info
-autoload -U colors && colors
-
-zstyle ':vcs_info:*' enable git hg
-zstyle ':vcs_info:*' formats " (%s:%b)%u%c "
-
-precmd() {
-    psvar=()
-
-    vcs_info
-    [[ -n $vcs_info_msg_0_ ]] && psvar[1]="$vcs_info_msg_0_"
-}
-
-if [[ -z "$SSH_CLIENT" ]]; then
-    prompt_host=%F{1}
-else
-    prompt_host=%F{3}
-fi
-
 # HELP:
 # Prompt Escapes:
 # %B (%b) - start bold mode
@@ -36,5 +17,25 @@ fi
 #
 # $1v - value of the first element of psvar array parameter
 
-PS1="%B%F{6}[%n${prompt_host}@%m%F{6} %1~]%F{2}%1v%f%b%# "
+autoload -Uz vcs_info
+autoload -U colors && colors
+
+zstyle ':vcs_info:*' enable git hg
+zstyle ':vcs_info:*' formats " (%s:%b)%u%c "
+
+precmd() {
+    psvar=()
+
+    vcs_info
+    [[ -n $vcs_info_msg_0_ ]] && psvar[1]="$vcs_info_msg_0_"
+}
+
+if [[ -z "$SSH_CLIENT" ]]; then
+    prompt_user="%F{1}%n%F{6}"
+else
+    prompt_user="%n%F{3}@%m%F{6}"
+fi
+
+
+PS1="%B%F{6}[${prompt_user} %1~]%F{2}%1v%f%b%# "
 
