@@ -10,6 +10,10 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-scripts/ctrlp.vim'
 Plugin 'vim-scripts/Liquid-Carbon'
 Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 
