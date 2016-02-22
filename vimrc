@@ -13,12 +13,6 @@ Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 
-"Bundle 'majutsushi/tagbar'
-"Bundle 'tpope/vim-fugitive'
-"Bundle 'Rip-Rip/clang_complete'
-"Bundle 'scrooloose/nerdcommenter'
-"Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
-
 "------------------------------
 "Enable plugins
 "------------------------------
