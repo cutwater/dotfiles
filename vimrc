@@ -95,7 +95,6 @@ set listchars=tab:>.,trail:.,extends:#,nbsp:.
 "Status line
 "------------------------------
 set laststatus=2
-set statusline=%<%f%y%m%r\ %{&encoding},%{&ff}\ %l,%c%V/%L\ %P
 
 set history=1000
 
