@@ -6,8 +6,3 @@ if has("gui_running")
     source ~/.vim/config/gui.vim
 endif
 
-" Remove trailing spaces
-au BufWritePre * :%s/\s\+$//e
-
-set wildignore+=.*
-
