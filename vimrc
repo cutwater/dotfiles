@@ -1,23 +1,7 @@
 source ~/.vim/config/plugins.vim
 
-"------------------------------
-"Common settings
-"------------------------------
-
-"------------------------------
-"GUI settings
-"------------------------------
 if has("gui_running")
-    colorscheme liquidcarbon
-    set guioptions-=m
-    set guioptions-=e
-    set guioptions-=T
-    set guioptions-=r
-    set guioptions-=R
-    set guioptions-=l
-    set guioptions-=L
-
-    set guifont=Monaco:h12
+    source ~/.vim/config/gui.vim
 endif
 
 
