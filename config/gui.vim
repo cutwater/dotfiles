@@ -1,3 +1,7 @@
+"--------------------------------------
+" GUI SETTINGS
+"--------------------------------------
+
 set guioptions-=m   " Disable menu bar
 set guioptions-=e   " Disable GUI tabs
 set guioptions-=T   " Disable toolbar

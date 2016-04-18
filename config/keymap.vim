@@ -1,3 +1,7 @@
+"--------------------------------------
+" HOTKEY BINDING SETTINGS
+"--------------------------------------
+
 imap <Ins> <Esc>i
 
 nmap <F3> :nohlsearch<CR>
