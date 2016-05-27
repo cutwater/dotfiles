@@ -2,6 +2,11 @@
 
 export EDITOR=vim
 export PAGER=less
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# Enable Java anti-aliasing
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
 
 PATH_DIRS=()
 
@@ -19,6 +24,7 @@ if [[ -d "$RVM_DIR" ]]; then
     PATH_DIRS=("$RVM_DIR" $PATH_DIRS)
     source "$RVM_DIR/scripts/rvm"
 fi
+unset RVM_DIR
 
 # Setup dir colors
 if [ -f "$HOME/.dircolors" ]; then
@@ -26,27 +32,22 @@ if [ -f "$HOME/.dircolors" ]; then
 fi
 
 if [[ "$PLATFORM" == 'macos' ]]; then
-    PATH_DIRS=("/usr/local/bin" $PATH_DIRS)
+    PATH_DIRS=("/usr/local/bin" "/usr/local/sbin" $PATH_DIRS)
     export LSCOLORS=GxFxCxDxBxegedabagaced
-fi
-
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-if [[ "$PLATFORM" == 'linux' ]]; then
+elif [[ "$PLATFORM" == 'linux' ]]; then
     export LANGUAGE=en_US:en
     PATH_DIRS+=("/opt/bin", "$HOME/usr/bin")
 fi
 
 # Add PATH_DIRS to PATH
-for path_dir in $PATH_DIRS; do
-    if [[ -d "$path_dir" ]]; then
-        PATH="$path_dir:$PATH"
+for dir in $PATH_DIRS; do
+    if [[ -d "$dir" && "${PATH#*$dir}" == "$PATH" ]]; then
+        PATH="$dir:$PATH"
     fi
 done
+unset dir
 export PATH
 
-# Enable Java anti-aliasing
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
 # PyEnv
 if which pyenv > /dev/null; then
     eval "$(pyenv init -)"
