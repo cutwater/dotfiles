@@ -47,3 +47,12 @@ export PATH
 
 # Enable Java anti-aliasing
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
+# PyEnv
+if which pyenv > /dev/null; then
+    eval "$(pyenv init -)"
+fi
+#if which pyenv-virtualenv-init > /dev/null; then
+#    eval "$(pyenv virtualenv-init -)"
+#fi
+
+unset PATH_DIRS
