@@ -12,4 +12,10 @@ set guioptions-=L   " Disable left scrollbar if vsplit
 
 colorscheme liquidcarbon
 
-set guifont=Monaco:h12
+if has("gui_macvim")
+    set guifont=Monaco:h12
+else
+    set guifont=Ubuntu\ Mono\ 10
+endif
+
+
