@@ -12,5 +12,4 @@ source "$HOME/.zsh/prompt"
 source "$HOME/.zsh/bindings"
 source "$HOME/.zsh/environ"
 
-[ -f "$HOME/.zsh/local" ] && . "$HOME/.zsh/local"
-
+[ -f "$HOME/.zsh/local" ] && source "$HOME/.zsh/local"

@@ -1,0 +1,10 @@
+# vim: ft=zsh
+
+case "$ITERM_PROFILE" in
+    "Solarized Dark")
+        export LSCOLORS=gxfxcxdxbxegedabagaced
+    ;;
+    "Green on Black")
+        export LSCOLORS=GxFxCxDxBxegedabagaced
+    ;;
+esac

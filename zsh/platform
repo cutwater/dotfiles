@@ -11,3 +11,8 @@ case $(uname) in
         ;;
 esac
 
+case "$PLATFORM" in
+    macos)
+        source "$HOME/.zsh/profiles/osx"
+        ;;
+esac

@@ -33,7 +33,6 @@ fi
 
 if [[ "$PLATFORM" == 'macos' ]]; then
     PATH_DIRS=("/usr/local/bin" "/usr/local/sbin" $PATH_DIRS)
-    export LSCOLORS=GxFxCxDxBxegedabagaced
 elif [[ "$PLATFORM" == 'linux' ]]; then
     export LANGUAGE=en_US:en
     PATH_DIRS+=("/opt/bin", "$HOME/usr/bin")
