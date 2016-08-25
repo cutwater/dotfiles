@@ -1,3 +1,4 @@
-gvimrc_local.vim
-bundle/
+bundle/*
+!bundle/Vundle.vim
+
 .netrwhist
