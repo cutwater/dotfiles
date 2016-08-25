@@ -19,6 +19,10 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 
+" Language support
+Plugin 'rust-lang/rust.vim'     " Rust
+Plugin 'cespare/vim-toml'       " TOML
+
 call vundle#end()
 
 filetype indent on  "required
