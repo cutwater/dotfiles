@@ -10,10 +10,14 @@ set guioptions-=R   " Disable right scrollbar if vsplit
 set guioptions-=l   " Disable left scrollbar
 set guioptions-=L   " Disable left scrollbar if vsplit
 
+set cursorline
+
+set colorcolumn=80
+
 colorscheme liquidcarbon
 
 if has("gui_macvim")
-    set guifont=Monaco:h12
+    set guifont=Menlo\ Regular:h12
 else
     set guifont=Ubuntu\ Mono\ 10
 endif
