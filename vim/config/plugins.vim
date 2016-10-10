@@ -12,12 +12,16 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'vim-scripts/ctrlp.vim'
-Plugin 'vim-scripts/Liquid-Carbon'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
+
+" Themes
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-scripts/Liquid-Carbon'
+Plugin 'cutwater/vim-colors-idea', {'pinned': 1}
 
 " Language support
 Plugin 'rust-lang/rust.vim'     " Rust
