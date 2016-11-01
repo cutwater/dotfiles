@@ -38,6 +38,7 @@ if [[ "$PLATFORM" == 'macos' ]]; then
 elif [[ "$PLATFORM" == 'linux' ]]; then
     export LANGUAGE=en_US:en
     PATH_DIRS+=("/opt/bin", "$HOME/usr/bin")
+    PATH_DIRS+=("$HOME/.pyenv/bin")
 fi
 
 # Add PATH_DIRS to PATH
