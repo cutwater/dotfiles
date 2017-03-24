@@ -32,7 +32,13 @@ if [ -f "$HOME/.dircolors" ]; then
 fi
 
 if [[ "$PLATFORM" == 'macos' ]]; then
+
     PATH_DIRS=("/usr/local/bin" "/usr/local/sbin" $PATH_DIRS)
+
+    if [[ -f /usr/libxexec/java_home ]]; then
+        export JAVA_HOME=$(/usr/libexec/java_home)
+    fi
+
 elif [[ "$PLATFORM" == 'linux' ]]; then
     export LANGUAGE=en_US:en
     PATH_DIRS+=("/opt/bin", "$HOME/usr/bin")
