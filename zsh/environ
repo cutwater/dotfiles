@@ -50,15 +50,12 @@ for dir in $PATH_DIRS; do
         PATH="$dir:$PATH"
     fi
 done
-unset dir
 export PATH
+
+unset dir
+unset PATH_DIRS
 
 # PyEnv
 if which pyenv > /dev/null; then
     eval "$(pyenv init -)"
 fi
-#if which pyenv-virtualenv-init > /dev/null; then
-#    eval "$(pyenv virtualenv-init -)"
-#fi
-
-unset PATH_DIRS
