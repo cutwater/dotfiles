@@ -20,7 +20,7 @@
 autoload -Uz vcs_info
 autoload -U colors && colors
 
-zstyle ':vcs_info:*' enable git hg
+zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' formats " (%s:%b)%u%c "
 
 precmd() {
