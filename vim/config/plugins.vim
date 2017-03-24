@@ -24,8 +24,9 @@ Plugin 'vim-scripts/Liquid-Carbon'
 Plugin 'cutwater/vim-colors-idea', {'pinned': 1}
 
 " Language support
-Plugin 'rust-lang/rust.vim'     " Rust
-Plugin 'cespare/vim-toml'       " TOML
+Plugin 'rust-lang/rust.vim'         " Rust
+Plugin 'cespare/vim-toml'           " TOML
+Plugin 'Glench/Vim-Jinja2-Syntax'   " Jinja2
 
 call vundle#end()
 
