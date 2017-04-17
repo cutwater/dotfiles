@@ -10,25 +10,9 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
 
 PATH_DIRS=()
 
-# Setup NodeJS NPM env vars
-# NPM install global packages into user directory
-#NPM_PACKAGES="$HOME/.npm-packages"
-#if [[ -d "$NPM_PACKAGES" ]]; then
-#    PATH_DIRS=("$NPM_PACKAGES/bin" $PATH_DIRS)
-#    export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-#fi
-
-# Setup ruby RVM env vars
-RVM_DIR="$HOME/.rvm"
-PATH_DIRS+=("$RVM_DIR/bin")
-
 # Rust
 PATH_DIRS+=("$HOME/.cargo/bin")
 
-# Setup dir colors
-if [[ -f "$HOME/.dircolors" ]]; then
-    eval "$(dircolors -b $HOME/.dircolors)"
-fi
 
 if [[ "$PLATFORM" == 'macos' ]]; then
 
@@ -38,6 +22,8 @@ if [[ "$PLATFORM" == 'macos' ]]; then
         export JAVA_HOME=$(/usr/libexec/java_home)
     fi
 
+    export LSCOLORS=GxFxCxDxBxegedabagaced
+
 elif [[ "$PLATFORM" == 'linux' ]]; then
     export LANGUAGE=en_US:en
 
@@ -46,6 +32,10 @@ elif [[ "$PLATFORM" == 'linux' ]]; then
 
     PATH_DIRS+=("/opt/bin", "$HOME/usr/bin")
     PATH_DIRS+=("$HOME/.pyenv/bin")
+
+    if [[ -f "$HOME/.dircolors" ]]; then
+        eval "$(dircolors -b $HOME/.dircolors)"
+    fi
 fi
 
 # Add PATH_DIRS to PATH

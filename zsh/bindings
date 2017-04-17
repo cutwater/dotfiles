@@ -14,23 +14,3 @@ bindkey "^R" history-incremental-search-backward  # Ctrl+R
 
 bindkey "^[[3~" delete-char                 # Delete (Backspace)
 
-#if [[ "$PLATFORM" == 'linux' ]]; then
-#    # TODO: Review and update binding for linux
-#    bindkey "\e[5~" beginning-of-history # PageUp
-#    bindkey "\e[6~" end-of-history # PageDown
-#
-#    if [[ "$TERM" == 'linux' ]]; then
-#        bindkey "\e[1~" beginning-of-line
-#        bindkey "\e[4~" end-of-line
-#    else
-#        bindkey "\e[H" beginning-of-line
-#        bindkey "\e[F" end-of-line
-#    fi
-#
-#    bindkey "^[[1;5D" backward-word
-#    bindkey "^[[1;5C" forward-word
-#
-#    bindkey "\e[3~" delete-char
-#
-#    bindkey '^R' history-incremental-search-backward
-#fi
