@@ -53,8 +53,8 @@ set listchars=tab:>.,trail:.,extends:#,nbsp:.
 "Status line
 "------------------------------
 set laststatus=2
-
 set history=1000
+set wildmenu
 
 "------------------------------
 "Backup and swap
