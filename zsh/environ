@@ -22,6 +22,9 @@ PATH_DIRS=()
 RVM_DIR="$HOME/.rvm"
 PATH_DIRS+=("$RVM_DIR/bin")
 
+# Rust
+PATH_DIRS+=("$HOME/.cargo/bin")
+
 # Setup dir colors
 if [[ -f "$HOME/.dircolors" ]]; then
     eval "$(dircolors -b $HOME/.dircolors)"
