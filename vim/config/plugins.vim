@@ -21,7 +21,6 @@ Plugin 'tpope/vim-fugitive'
 " Themes
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-scripts/Liquid-Carbon'
-Plugin 'cutwater/vim-colors-idea', {'pinned': 1}
 
 " Language support
 Plugin 'rust-lang/rust.vim'         " Rust
