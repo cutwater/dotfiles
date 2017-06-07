@@ -1,16 +1,23 @@
 # vim: ft=zsh
 
-# Note: iTerm2 has misconfigured <Home> and <End> keys.
-# Need to add Esc + [1~ and Esc + [4~ for <Home> and <End>
-# respectively.
+# Use emacs key bindings
+bindkey -e
 
-bindkey "^[[1;5D" backward-word             # Ctrl+Right
-bindkey "^[[1;5C" forward-word              # Ctrl+Left
+bindkey "^[[1;5D" backward-word             # [Ctrl-RightArrow] - move forward one word
+bindkey "^[[1;5C" forward-word              # [Ctrl-LeftArrow] - move backward one word
 
-bindkey "^[[H" beginning-of-line           # Home
-bindkey "^[[F" end-of-line                 # End
+if [[ "${terminfo[khome]}" != "" ]]; then
+    bindkey "${terminfo[khome]}" beginning-of-line      # [Home] - Go to beginning of line
+fi
+if [[ "${terminfo[kend]}" != "" ]]; then
+    bindkey "${terminfo[kend]}" end-of-line             # [End] - Go to end of line
+fi
 
-bindkey "^R" history-incremental-search-backward  # Ctrl+R
+bindkey '^?' backward-delete-char               # [Backspace] - delete backward
+if [[ "${terminfo[kdch1]}" != "" ]]; then       # [Delete] - delete forward
+    bindkey "${terminfo[kdch1]}" delete-char
+else
+    bindkey "^[[3~" delete-char
+fi
 
-bindkey "^[[3~" delete-char                 # Delete (Backspace)
-
+bindkey "^R" history-incremental-search-backward  # [Ctrl-R] - Search history
