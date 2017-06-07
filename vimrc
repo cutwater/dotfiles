@@ -7,3 +7,6 @@ if has("gui_running")
     source ~/.vim/config/gui.vim
 endif
 
+if filereadable(expand("~/.vim/config/local.vim"))
+    source ~/.vim/config/local.vim
+endif

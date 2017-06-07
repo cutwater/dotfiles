@@ -2,3 +2,6 @@ bundle/*
 !bundle/Vundle.vim
 
 .netrwhist
+
+# Local configuration
+config/_local.vim
