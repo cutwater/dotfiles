@@ -19,7 +19,7 @@ colorscheme liquidcarbon
 if has("gui_macvim")
     set guifont=Menlo\ Regular:h12
 else
-    set guifont=Ubuntu\ Mono\ 10
+    set guifont=Ubuntu\ Mono\ 12
 endif
 
 
