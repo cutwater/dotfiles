@@ -61,14 +61,6 @@ set noswapfile
 "Encodings
 "------------------------------
 set encoding=utf-8
-set termencoding=utf-8
-set fileencoding=utf-8
-set fileencodings=utf-8,cp1251,koi8-r,cp866
-
-"Window options
-"------------------------------
-set winminwidth=0
-set winminheight=0
 
 "Other options
 "------------------------------
