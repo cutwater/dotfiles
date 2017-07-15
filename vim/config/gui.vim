@@ -21,5 +21,3 @@ if has("gui_macvim")
 else
     set guifont=Ubuntu\ Mono\ 12
 endif
-
-

@@ -1,5 +1,5 @@
 "--------------------------------------
-" PLUGIN SETTINGS
+" INSTALLED PLUGINS
 "--------------------------------------
 
 set nocompatible  "required
@@ -11,24 +11,40 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'vim-scripts/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
+" Code / project avigation
+"--------------------------------------
+
+Plugin 'vim-scripts/ctrlp.vim'              " Files and buffers search
+Plugin 'scrooloose/nerdtree'                " Files tree
 Plugin 'majutsushi/tagbar'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-fugitive'
-Plugin 'editorconfig/editorconfig-vim'
 
 " Themes
+"--------------------------------------
+
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-scripts/Liquid-Carbon'
 
-" Language support
-Plugin 'rust-lang/rust.vim'         " Rust
-Plugin 'cespare/vim-toml'           " TOML
-Plugin 'Glench/Vim-Jinja2-Syntax'   " Jinja2
+" Tools
+"--------------------------------------
+
+Plugin 'tpope/vim-fugitive'                 " Git support
+Plugin 'editorconfig/editorconfig-vim'      " EditorConfig
+
+" Languages support
+"--------------------------------------
+"
+Plugin 'rust-lang/rust.vim'                 " Rust
+Plugin 'cespare/vim-toml'                   " TOML
+Plugin 'Glench/Vim-Jinja2-Syntax'           " Jinja2
+
+" Other
+"--------------------------------------
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 
 filetype indent on  "required
 filetype plugin on  "required
+
