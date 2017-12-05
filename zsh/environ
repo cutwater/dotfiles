@@ -8,6 +8,11 @@ export LC_ALL=en_US.UTF-8
 # Enable Java anti-aliasing
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
 
+# Set GPG_TTY if gpg is installed
+if hash gpg &>/dev/null; then
+    export GPG_TTY=$(tty)
+fi
+
 PATH_DIRS=()
 
 # Rust
