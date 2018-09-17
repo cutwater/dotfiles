@@ -1,7 +1,8 @@
 # vim: ft=zsh
 
-# ls
+## ls
 if [[ "$PLATFORM" == "linux" ]]; then
+    alias open='xdg-open'
     alias ls='ls --color=auto'
 elif [[ "$PLATFORM" == 'macos' ]]; then
     alias ls='ls -G'
@@ -9,15 +10,18 @@ fi
 
 alias ll='ls -l'
 
-# git
+## SSH
+alias ssh-nocheck='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
+
+## Git
 alias gst='git status'
 
-# Global aliases
+## Global aliases
+# Suppress output
 alias -g NO='&> /dev/null'
+# Suppress error messages
 alias -g NE='2> /dev/null'
-
-alias -g HE='2>>( sed -e "s/.*/$fg_bold[red]&$reset_color/" 1>&2 )' # Highlight errors
-
+# Highlight errors
+alias -g HE='2>>( sed -e "s/.*/$fg_bold[red]&$reset_color/" 1>&2 )'
 alias -g X='| xargs'
 
-alias ssh-nocheck='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
