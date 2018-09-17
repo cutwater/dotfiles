@@ -55,6 +55,7 @@ unset dir
 unset PATH_DIRS
 
 # PyEnv
-if which pyenv > /dev/null; then
+if command -v pyenv &>/dev/null; then
+    export PYENV_ROOT=$(pyenv root)
     eval "$(pyenv init -)"
 fi
