@@ -27,7 +27,7 @@ if [[ "$PLATFORM" == 'macos' ]]; then
         export JAVA_HOME=$(/usr/libexec/java_home)
     fi
 
-    export LSCOLORS=GxFxCxDxBxegedabagaced
+    export LSCOLORS=exfxfeaeBxxehehbadacea
 
 elif [[ "$PLATFORM" == 'linux' ]]; then
     export LANGUAGE=en_US:en
