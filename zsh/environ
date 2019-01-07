@@ -18,7 +18,6 @@ PATH_DIRS=()
 # Rust
 PATH_DIRS+=("$HOME/.cargo/bin")
 
-
 if [[ "$PLATFORM" == 'macos' ]]; then
 
     PATH_DIRS=("/usr/local/bin" "/usr/local/sbin" $PATH_DIRS)
@@ -58,4 +57,11 @@ unset PATH_DIRS
 if command -v pyenv &>/dev/null; then
     export PYENV_ROOT=$(pyenv root)
     eval "$(pyenv init -)"
+fi
+
+# NVM
+if [[ -d "$HOME/.nvm" ]]; then
+    export NVM_DIR="$HOME/.nvm"
+    [[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
+    [[ -s "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
 fi
