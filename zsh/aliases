@@ -3,12 +3,13 @@
 ## ls
 if [[ "$PLATFORM" == "linux" ]]; then
     alias open='xdg-open'
-    alias ls='ls --color=auto'
+    alias ls='ls --color=auto --group-directories-first'
 elif [[ "$PLATFORM" == 'macos' ]]; then
     alias ls='ls -G'
 fi
 
 alias ll='ls -l'
+alias la='ls -la'
 
 ## SSH
 alias ssh-nocheck='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
