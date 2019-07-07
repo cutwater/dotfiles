@@ -18,6 +18,9 @@ PATH_DIRS=()
 # Rust
 PATH_DIRS+=("$HOME/.cargo/bin")
 
+# Poetry
+PATH_DIRS+=("$HOME/.poetry/bin")
+
 if [[ "$PLATFORM" == 'macos' ]]; then
 
     PATH_DIRS=("/usr/local/bin" "/usr/local/sbin" $PATH_DIRS)
