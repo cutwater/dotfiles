@@ -1,5 +1,5 @@
-source ~/.vim/config/plugins.vim
 source ~/.vim/config/common.vim
+source ~/.vim/config/plugins.vim
 source ~/.vim/config/keymap.vim
 source ~/.vim/config/lang.vim
 

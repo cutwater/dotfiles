@@ -1,8 +1,11 @@
-"------------------------------
+"==============================
 " COMMON SETTINGS
-"------------------------------
+"==============================
 
-"Syntax coloring options
+" Disable compatibility with Vi
+set nocompatible
+
+" Syntax coloring options
 "------------------------------
 
 syntax on
@@ -12,12 +15,12 @@ set number
 
 set showcmd
 
-"Indent options
+" Indent options
 "------------------------------
 set autoindent
 set smartindent
 
-"Search options
+" Search options
 "------------------------------
 set hlsearch
 set wrapscan
@@ -27,14 +30,14 @@ set ignorecase
 set scrolljump=7
 set scrolloff=7
 
-"Tab indent options
+" Tab indent options
 "------------------------------
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
 
-"Wrap options
+" Wrap options
 "------------------------------
 set wrap
 set linebreak
@@ -45,7 +48,7 @@ set backspace=indent,eol,start
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
-"Status line
+" Status line
 "------------------------------
 set laststatus=2
 set history=1000
@@ -53,14 +56,20 @@ set history=1000
 set completeopt=menu
 set wildmenu
 
-"Backup and swap
+" Backup and swap
 "------------------------------
 set nobackup
 set noswapfile
 
-"Encodings
+" Encodings
 "------------------------------
 set encoding=utf-8
+
+" Filetypes
+"------------------------------
+
+filetype indent on
+filetype plugin on
 
 "Other options
 "------------------------------
