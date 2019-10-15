@@ -14,7 +14,7 @@ set cursorline
 
 set colorcolumn=80
 
-colorscheme liquidcarbon
+colorscheme darcula
 
 if has("gui_macvim")
     set guifont=Menlo\ Regular:h12

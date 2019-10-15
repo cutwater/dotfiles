@@ -16,6 +16,7 @@ Plug 'majutsushi/tagbar'
 
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-scripts/Liquid-Carbon'
+Plug 'blueshirts/darcula'
 
 " Tools
 "--------------------------------------
