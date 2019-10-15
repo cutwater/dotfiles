@@ -13,7 +13,10 @@ set background=dark
 
 set number
 
+" Show last command
 set showcmd
+" Don't show editor mode (handled by lightline)
+set noshowmode
 
 " Indent options
 "------------------------------

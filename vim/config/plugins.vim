@@ -34,7 +34,6 @@ Plug 'Glench/Vim-Jinja2-Syntax'           " Jinja2
 " Other
 "--------------------------------------
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
