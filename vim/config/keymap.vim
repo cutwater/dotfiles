@@ -17,10 +17,10 @@ nmap <silent> <Up> gk
 
 nmap <F7> :NERDTreeToggle<CR>
 
-" tmux
+" Fix keymap for tmux terminal
 if &term =~ '^tmux'
-    exec "set <Up>=\e[1;*A"
-    exec "set <Down>=\e[1;*B"
-    exec "set <Right>=\e[1;*C"
-    exec "set <Left>=\e[1;*D"
+    exec "set <xUp>=\e[1;*A"
+    exec "set <xDown>=\e[1;*B"
+    exec "set <xRight>=\e[1;*C"
+    exec "set <xLeft>=\e[1;*D"
 endif
