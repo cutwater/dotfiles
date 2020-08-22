@@ -4,12 +4,12 @@
 # It should contain commands to set up aliases,
 # functions, options, key bindings, etc.
 
-source "$HOME/.zsh/platform"
-source "$HOME/.zsh/config"
-source "$HOME/.zsh/aliases"
-source "$HOME/.zsh/completion"
-source "$HOME/.zsh/prompt"
-source "$HOME/.zsh/bindings"
-source "$HOME/.zsh/environ"
+source "$HOME/.zsh/platform.zsh"
+source "$HOME/.zsh/config.zsh"
+source "$HOME/.zsh/aliases.zsh"
+source "$HOME/.zsh/completion.zsh"
+source "$HOME/.zsh/prompt.zsh"
+source "$HOME/.zsh/bindings.zsh"
+source "$HOME/.zsh/environ.zsh"
 
-[ -f "$HOME/.zsh/local" ] && source "$HOME/.zsh/local"
+[ -f "$HOME/.zsh/local.zsh" ] && source "$HOME/.zsh/local.zsh"

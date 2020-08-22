@@ -25,4 +25,3 @@ alias -g NE='2> /dev/null'
 # Highlight errors
 alias -g HE='2>>( sed -e "s/.*/$fg_bold[red]&$reset_color/" 1>&2 )'
 alias -g X='| xargs'
-
