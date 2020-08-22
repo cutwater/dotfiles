@@ -2,11 +2,6 @@
 
 export EDITOR=vim
 export PAGER=less
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-
-# Enable Java anti-aliasing
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
 
 # Set GPG_TTY if gpg is installed
 if hash gpg &>/dev/null; then
@@ -18,12 +13,25 @@ PATH_DIRS=()
 # Rust
 PATH_DIRS+=("$HOME/.cargo/bin")
 
+# Yarn
+PATH_DIRS+=(
+    "$HOME/.yarn/bin"
+    "$HOME/.config/yarn/global/node_modules/.bin"
+)
+
+# Pyenv
+PATH_DIRS+=("$HOME/.pyenv/bin")
+
 # Poetry
 PATH_DIRS+=("$HOME/.poetry/bin")
 
 if [[ "$PLATFORM" == 'macos' ]]; then
 
-    PATH_DIRS=("/usr/local/bin" "/usr/local/sbin" $PATH_DIRS)
+    PATH_DIRS=(
+        "/usr/local/bin"
+        "/usr/local/sbin"
+        $PATH_DIRS
+    )
 
     if [[ -f /usr/libxexec/java_home ]]; then
         export JAVA_HOME=$(/usr/libexec/java_home)
@@ -32,13 +40,12 @@ if [[ "$PLATFORM" == 'macos' ]]; then
     export LSCOLORS=GxFxCxDxBxegedabagaced
 
 elif [[ "$PLATFORM" == 'linux' ]]; then
-    export LANGUAGE=en_US:en
+    # export LANGUAGE=en_US:en
 
     # Use system qemu
     export LIBVIRT_DEFAULT_URI="qemu:///system"
 
     PATH_DIRS+=("/opt/bin" "$HOME/usr/bin")
-    PATH_DIRS+=("$HOME/.pyenv/bin")
 
     if [[ -f "$HOME/.dircolors" ]]; then
         eval "$(dircolors -b $HOME/.dircolors)"
@@ -63,8 +70,8 @@ if command -v pyenv &>/dev/null; then
 fi
 
 # NVM
-if [[ -d "$HOME/.nvm" ]]; then
-    export NVM_DIR="$HOME/.nvm"
-    [[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
-    [[ -s "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
-fi
+# if [[ -d "$HOME/.nvm" ]]; then
+#     export NVM_DIR="$HOME/.nvm"
+#     [[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
+#     [[ -s "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
+# fi
