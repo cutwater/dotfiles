@@ -45,7 +45,7 @@ elif [[ "$PLATFORM" == 'linux' ]]; then
     # Use system qemu
     export LIBVIRT_DEFAULT_URI="qemu:///system"
 
-    PATH_DIRS+=("/opt/bin" "$HOME/usr/bin")
+    PATH_DIRS+=("/opt/bin" "$HOME/.local/bin")
 
     if [[ -f "$HOME/.dircolors" ]]; then
         eval "$(dircolors -b $HOME/.dircolors)"

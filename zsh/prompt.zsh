@@ -38,4 +38,3 @@ fi
 
 
 PS1="%B%F{6}[${prompt_user} %1~]%F{2}%1v%f%b%# "
-
