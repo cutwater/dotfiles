@@ -1,5 +1,8 @@
 let g:fern#disable_default_mappings   = 1
 
+" Nerd font renderer
+let g:fern#renderer = "nerdfont"
+
 " Opens fern and reveals the current buffer in the project tree.
 noremap <silent> <Leader>f :Fern . -drawer -width=40 -toggle<CR><C-w>=
 
