@@ -11,3 +11,7 @@ set expandtab
 set smarttab
 set autoindent
 
+" Netrw
+" -----
+
+let g:netrw_home = stdpath("cache")
