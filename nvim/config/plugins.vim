@@ -2,6 +2,7 @@
 call plug#begin(stdpath('data') . '/plugged')
     " Language support
     " Plug 'cespare/vim-toml'                   " TOML
+    " Plug 'hashivim/vim-terraform'
 
     " Color themes
     Plug 'morhetz/gruvbox'
