@@ -1,6 +1,6 @@
 # vim: ft=zsh
 
-export EDITOR=vim
+export EDITOR=nvim
 export PAGER=less
 
 # Set GPG_TTY if gpg is installed
