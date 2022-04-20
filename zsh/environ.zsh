@@ -22,9 +22,6 @@ PATH_DIRS+=(
 # Pyenv
 PATH_DIRS+=("$HOME/.pyenv/bin")
 
-# Poetry
-PATH_DIRS+=("$HOME/.poetry/bin")
-
 if [[ "$PLATFORM" == 'macos' ]]; then
 
     PATH_DIRS=(
