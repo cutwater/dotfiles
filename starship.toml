@@ -1,13 +1,14 @@
-format = """
-$username\
-$hostname\
-$directory\
-$git_branch\
-$git_commit\
-$git_state\
-$git_status\
-$python\
-$character"""
+# add_newline = false
+# format = """
+# $username\
+# $hostname\
+# $directory\
+# $git_branch\
+# $git_commit\
+# $git_state\
+# $git_status\
+# $python\
+# $character"""
 
 [character]
 success_symbol = "[➜](bold green) "
@@ -16,8 +17,14 @@ error_symbol = "[✗](bold red) "
 [git_branch]
 symbol = " "
 
+# [line_break]
+# disabled = true
+
 [python]
 symbol = " "
 pyenv_version_name = true
 pyenv_prefix = "py:"
 python_binary = "python3"
+
+[helm]
+disabled = true
