@@ -13,5 +13,7 @@ source "$HOME/.zsh/environ.zsh"
 source "$HOME/.zsh/prompt.zsh"
 
 
-[ -f "$HOME/.zsh/local.zsh" ] && source "$HOME/.zsh/local.zsh"
+if [[ -f "$HOME/.zsh/local.zsh" ]]; then
+  source "$HOME/.zsh/local.zsh"
+fi
 
