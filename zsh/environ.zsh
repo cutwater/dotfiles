@@ -24,17 +24,13 @@ PATH_DIRS+=("$HOME/.pyenv/bin")
 
 if [[ "$PLATFORM" == 'macos' ]]; then
 
-    PATH_DIRS=(
-        "/usr/local/bin"
-        "/usr/local/sbin"
-        $PATH_DIRS
-    )
-
     if [[ -f /usr/libxexec/java_home ]]; then
         export JAVA_HOME=$(/usr/libexec/java_home)
     fi
 
     export LSCOLORS=GxFxCxDxBxegedabagaced
+
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 
 elif [[ "$PLATFORM" == 'linux' ]]; then
     # export LANGUAGE=en_US:en
