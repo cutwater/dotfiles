@@ -34,6 +34,7 @@ if [[ "$PLATFORM" == 'macos' ]]; then
 
 elif [[ "$PLATFORM" == 'linux' ]]; then
     # export LANGUAGE=en_US:en
+    export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 
     # Use system qemu
     export LIBVIRT_DEFAULT_URI="qemu:///system"
