@@ -28,3 +28,6 @@ python_binary = "python3"
 
 [helm]
 disabled = true
+
+[rust]
+symbol = "⚙️ "
