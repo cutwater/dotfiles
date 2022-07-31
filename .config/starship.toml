@@ -10,24 +10,34 @@
 # $python\
 # $character"""
 
+# [line_break]
+# disabled = true
+
 [character]
 success_symbol = "[➜](bold green) "
 error_symbol = "[✗](bold red) "
 
 [git_branch]
+format = '\[[$symbol$branch]($style)\]'
 symbol = " "
 
-# [line_break]
-# disabled = true
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style))'
 
 [python]
-symbol = " "
+format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
+symbol = " "
 pyenv_version_name = true
-pyenv_prefix = "py:"
+pyenv_prefix = "~"
 python_binary = "python3"
 
-[helm]
+[lua]
 disabled = true
 
+[package]
+format = '\[[$symbol$version]($style)\]'
+symbol = " "
+
 [rust]
-symbol = "⚙️ "
+format = '\[[$symbol($version)]($style)\]'
+symbol = " "
