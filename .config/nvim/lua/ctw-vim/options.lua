@@ -9,3 +9,5 @@ o.softtabstop = 4
 
 -- Row numbers
 o.number = true
+
+o.mouse = "a"
