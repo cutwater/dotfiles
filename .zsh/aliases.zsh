@@ -8,6 +8,8 @@ elif [[ "$PLATFORM" == 'macos' ]]; then
     alias ls='ls -G'
 fi
 
+alias vim='nvim'
+
 alias ll='ls -l'
 alias la='ls -la'
 
