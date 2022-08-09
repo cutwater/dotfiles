@@ -1,1 +1,1 @@
-require('ctw-vim/options')
+require('ctw-vim/options').setup()

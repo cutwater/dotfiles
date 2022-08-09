@@ -1,13 +1,18 @@
-local o = vim.o
+local M = {}
 
--- Indentation
-o.expandtab = true
-o.smartindent = true
-o.shiftwidth = 4
-o.tabstop = 4
-o.softtabstop = 4
+M.setup = function()
+  -- Indentation
+  vim.o.expandtab = true
+  vim.o.smartindent = true
+  vim.o.shiftwidth = 4
+  vim.o.tabstop = 4
+  vim.o.softtabstop = 4
 
--- Row numbers
-o.number = true
+  -- Row numbers
+  vim.o.number = true
 
-o.mouse = "a"
+  vim.o.mouse = "a"
+end
+
+return M
+
