@@ -11,7 +11,7 @@ local plugins = {
   },
   {
     "folke/which-key.nvim",
-    config = function() require("ctw-vim.whichkey").setup() end,
+    config = require("ctw-vim.whichkey").setup,
   },
   {
     "nvim-lualine/lualine.nvim",
