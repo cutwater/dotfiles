@@ -27,7 +27,7 @@ local plugins = {
 }
 
 function M.setup()
-  packer = require("packer")
+  local packer = require("packer")
   packer.startup(function(use)
     for _, plugin in pairs(plugins) do
       use(plugin)
