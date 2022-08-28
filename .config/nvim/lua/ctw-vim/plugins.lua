@@ -10,6 +10,10 @@ local plugins = {
     end,
   },
   {
+    "folke/which-key.nvim",
+    config = function() require("ctw-vim.whichkey").setup() end,
+  },
+  {
     "nvim-lualine/lualine.nvim",
     requires = { "kyazdani42/nvim-web-devicons", opt = true },
     config = function()

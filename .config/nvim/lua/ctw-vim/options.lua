@@ -11,7 +11,11 @@ M.setup = function()
   -- Row numbers
   vim.o.number = true
 
+  -- Misc
   vim.o.mouse = "a"
+
+  vim.o.timeoutlen = 500  -- The tiemout before WhichKey opens
+
 end
 
 return M
