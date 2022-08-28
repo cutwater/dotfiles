@@ -13,6 +13,9 @@
 # [line_break]
 # disabled = true
 
+[cmd_duration]
+format = '\[[$duration]($style)\]'
+
 [character]
 success_symbol = "[➜](bold green) "
 error_symbol = "[✗](bold red) "
@@ -41,3 +44,7 @@ symbol = " "
 [rust]
 format = '\[[$symbol($version)]($style)\]'
 symbol = " "
+
+[terraform]
+format = '\[[$symbol$workspace]($style)\]'
+symbol = "tf:"
