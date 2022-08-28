@@ -6,7 +6,7 @@ local plugins = {
   {
     "gruvbox-community/gruvbox",
     config = function()
-      vim.cmd 'colorscheme gruvbox'
+      vim.cmd "colorscheme gruvbox"
     end,
   },
   {
@@ -15,7 +15,15 @@ local plugins = {
     config = function()
       require("lualine").setup()
     end,
-  }
+  },
+  {
+    "kyazdani42/nvim-tree.lua",
+    requires = { "kyazdani42/nvim-web-devicons" },
+    tag = "nightly",
+    config = function()
+      require("nvim-tree").setup()
+    end,
+  },
 }
 
 function M.setup()
