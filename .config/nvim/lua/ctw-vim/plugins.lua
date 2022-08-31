@@ -11,7 +11,9 @@ local plugins = {
   },
   {
     "folke/which-key.nvim",
-    config = require("ctw-vim.whichkey").setup,
+    config = function() 
+			require("which-key").setup {}
+		end
   },
   {
     "nvim-lualine/lualine.nvim",
@@ -27,6 +29,10 @@ local plugins = {
     config = function()
       require("nvim-tree").setup()
     end,
+  },
+  {
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    requires = { 'nvim-lua/plenary.nvim' },
   },
 }
 
