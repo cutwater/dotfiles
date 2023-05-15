@@ -20,6 +20,9 @@ format = '\[[$duration]($style)\]'
 success_symbol = "[➜](bold green) "
 error_symbol = "[✗](bold red) "
 
+[hostname]
+ssh_symbol = " "
+
 [git_branch]
 format = '\[[$symbol$branch]($style)\]'
 symbol = " "
@@ -48,3 +51,10 @@ symbol = " "
 [terraform]
 format = '\[[$symbol$workspace]($style)\]'
 symbol = "tf:"
+
+[os.symbols]
+Arch = " "
+CentOS = " "
+Debian = " "
+Ubuntu = " "
+Unknown = " "
