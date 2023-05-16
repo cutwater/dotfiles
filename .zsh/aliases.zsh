@@ -13,6 +13,8 @@ alias vim='nvim'
 alias ll='ls -l'
 alias la='ls -la'
 
+alias exa='exa --group-directories-first'
+
 ## SSH
 alias ssh-nocheck='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 
