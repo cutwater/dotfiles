@@ -42,7 +42,7 @@ disabled = true
 
 [package]
 format = '\[[$symbol$version]($style)\]'
-symbol = " "
+symbol = " "
 
 [rust]
 format = '\[[$symbol($version)]($style)\]'
