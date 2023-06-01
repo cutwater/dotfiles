@@ -15,6 +15,10 @@ symbol = " "
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style))'
 
+[docker_context]
+format = '\[[$symbol $context]($style)\]'
+symbol = " "
+
 [python]
 format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
 symbol = " "
