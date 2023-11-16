@@ -22,6 +22,9 @@ format = '([\[$all_status$ahead_behind\]]($style))'
 format = '\[[$symbol $context]($style)\]'
 symbol = " "
 
+[helm]
+format = '\[[$symbol($version)]($style)\]'
+
 [python]
 format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
 symbol = " "
