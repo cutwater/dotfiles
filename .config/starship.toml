@@ -25,6 +25,9 @@ symbol = " "
 [helm]
 format = '\[[$symbol($version)]($style)\]'
 
+[nodejs]
+format = '\[[$symbol($version)]($style)\]'
+
 [python]
 format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
 symbol = " "
