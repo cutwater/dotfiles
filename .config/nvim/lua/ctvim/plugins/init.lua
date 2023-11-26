@@ -2,7 +2,7 @@ local plugins = {
     { 'wbthomason/packer.nvim' },
 
     -- Theme
-    { 
+    {
         'gruvbox-community/gruvbox',
         config = function()
             vim.cmd('colorscheme gruvbox')
@@ -12,26 +12,27 @@ local plugins = {
         'folke/which-key.nvim',
         config = function()
             require('ctvim/plugins/which-key').setup()
-        end
+        end,
     },
     {
-        'nvim-telescope/telescope.nvim', 
+        'nvim-telescope/telescope.nvim',
         tag = '0.1.4',
         requires = { {'nvim-lua/plenary.nvim'} }
     },
+    -- Starting page greeting window
     {
         'goolord/alpha-nvim',
         requires = { 'nvim-tree/nvim-web-devicons' },
         config = function()
             require('ctvim/plugins/alpha').setup()
-        end
+        end,
     },
-    {   
+    {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons' },
         config = function()
             require('lualine').setup()
-        end
+        end,
     },
     {
         'nvim-treesitter/nvim-treesitter',
@@ -49,7 +50,6 @@ local plugins = {
         config = function()
             require('ctvim/plugins/nvim-tree').setup()
         end,
-
     },
 }
 

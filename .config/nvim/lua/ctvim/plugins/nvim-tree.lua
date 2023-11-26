@@ -16,14 +16,14 @@ local function on_attach(bufnr)
     vim.keymap.set('n', '?', api.tree.toggle_help, opt('Help'))
 end
 
-local function setup()
-    local opts = {
-        view = {
-            width = 40,
-        },
-        on_attach = on_attach,
-    }
+local opts = {
+    view = {
+        width = 40,
+    },
+    on_attach = on_attach,
+}
 
+local function setup()
     -- Disable netrw
     vim.g.loaded_netrw = 1
     vim.g.loaded_netrwPlugin = 1
@@ -31,9 +31,9 @@ local function setup()
     -- Enable highlight groups
     vim.opt.termguicolors = true
 
-    require('nvim-tree').setup(opts)    
+    require('nvim-tree').setup(opts)
 end
 
 return {
-    setup = setup
+    setup = setup,
 }
