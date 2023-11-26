@@ -1,7 +1,11 @@
-local plugins = {
-    { 'wbthomason/packer.nvim' },
+local opts = {
+    install = {
+        missing = false,
+    }
+}
 
-    -- Theme
+local plugins = {
+    -- -- Themes
     {
         'gruvbox-community/gruvbox',
         config = function()
@@ -17,19 +21,19 @@ local plugins = {
     {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.4',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        dependencies = { {'nvim-lua/plenary.nvim'} }
     },
     -- Starting page greeting window
     {
         'goolord/alpha-nvim',
-        requires = { 'nvim-tree/nvim-web-devicons' },
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
         config = function()
             require('ctvim/plugins/alpha').setup()
         end,
     },
     {
         'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons' },
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
         config = function()
             require('ctvim/plugins/lualine').setup()
         end,
@@ -46,7 +50,7 @@ local plugins = {
     },
     {
         'nvim-tree/nvim-tree.lua',
-        requires = { 'nvim-tree/nvim-web-devicons' },
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
         config = function()
             require('ctvim/plugins/nvim-tree').setup()
         end,
@@ -54,12 +58,9 @@ local plugins = {
 }
 
 local function setup()
-    local packer = require('packer')
-    packer.startup(function(use)
-        for _, plugin in ipairs(plugins) do
-            use(plugin)
-        end
-    end)
+    local lazy = require('lazy')
+
+    lazy.setup(plugins, opts)
 end
 
 return {

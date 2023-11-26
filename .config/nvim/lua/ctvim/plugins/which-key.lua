@@ -4,7 +4,9 @@ local opts = {
 }
 
 local mappings = {
-   f = { name = "Find" }
+   b = { name = "Buffers" },
+   f = { name = "Find" },
+   s = { name = "Search" },
 }
 
 local function setup()

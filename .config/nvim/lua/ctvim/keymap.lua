@@ -1,11 +1,32 @@
-local function setup()
-    local telescope = require('telescope.builtin')
+local function setup_telescope()
+    local status_ok, telescope = pcall(require, 'telescope.builtin')
+    if not status_ok then
+        return
+    end
+
+    -- Git
     vim.keymap.set('n', '<C-p>', telescope.git_files, { desc = "Git files" })
-    vim.keymap.set('n', '<leader>ff', telescope.find_files, { desc = "Find file" })
-    vim.keymap.set('n', '<leader>fg', telescope.live_grep, { desc = "Live grep" })
-    vim.keymap.set('n', '<leader>fb', telescope.buffers, { desc = "Buffers" })
-    vim.keymap.set('n', '<leader>fh', telescope.help_tags, { desc = "Help tags" })
-    vim.keymap.set('n', '<leader>fe', '<cmd>NvimTreeToggle<cr>', { desc = "File explorer" })
+
+    -- Buffers
+    vim.keymap.set('n', '<leader>bf', telescope.buffers, { desc = "Find" })
+
+    -- Search
+    vim.keymap.set('n', '<leader>sf', telescope.find_files, { desc = "Find File" })
+    vim.keymap.set('n', '<leader>st', telescope.live_grep, { desc = "Text" })
+    vim.keymap.set('n', '<leader>sh', telescope.help_tags, { desc = "Help tags" })
+end
+
+local function setup_nvim_tree()
+    if not pcall(require, 'nvim-tree') then
+        return
+    end
+
+    vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<cr>', { desc = "Explorer" })
+end
+
+local function setup()
+    setup_telescope()
+    setup_nvim_tree()
 end
 
 return {
