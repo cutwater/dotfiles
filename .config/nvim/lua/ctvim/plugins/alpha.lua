@@ -15,8 +15,8 @@ local function setup()
     local button = theme.button
     theme.section.buttons.val = {
         button("e", "  New file", "<cmd>ene <CR>"),
-        button("<leader> f f", "󰈞  Find file"),
-        button("<leader> f g", "󰈬  Find word"),
+        button("<leader> s f", "󰈞  Find file"),
+        button("<leader> s t", "󰈬  Find text"),
     }
     require('alpha').setup(theme.config)
 
