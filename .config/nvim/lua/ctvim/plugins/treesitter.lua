@@ -1,14 +1,15 @@
 local opts = {
     -- A list of parser names, or "all" (the five listed parsers should always be installed)
     ensure_installed = {
-        "vim",
-        "vimdoc",
+        "bash",
+        "javascript",
         "lua",
         "python",
         "rust",
-        "javascript",
         "typescript",
-        "bash",
+        "vim",
+        "vimdoc",
+        "yaml",
     },
 
     ignore_install = { "all" },
