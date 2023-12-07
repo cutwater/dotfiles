@@ -11,3 +11,7 @@ source "$HOME/.zsh/completion.zsh"
 source "$HOME/.zsh/bindings.zsh"
 source "$HOME/.zsh/environ.zsh"
 source "$HOME/.zsh/prompt.zsh"
+
+if [[ -f "$HOME/.zshrc.local" ]]; then
+    source "$HOME/.zshrc.local"
+fi
