@@ -20,7 +20,7 @@ local plugins = {
     },
     {
         'nvim-telescope/telescope.nvim',
-        tag = '0.1.4',
+        tag = '0.1.8',
         dependencies = { {'nvim-lua/plenary.nvim'} }
     },
     -- Starting page greeting window
