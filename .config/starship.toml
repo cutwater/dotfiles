@@ -9,6 +9,7 @@ error_symbol = "[✗](bold red) "
 ssh_symbol = " "
 
 [aws]
+symbol = " "
 format = '\[[$symbol($profile )(\($region\) )(\[$duration\] )]($style)\]'
 
 [git_branch]
