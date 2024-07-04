@@ -1,11 +1,14 @@
-local function setup()
-    require('ctvim/bootstrap').setup()
-    require('ctvim/options').setup()
-    require('ctvim/autocmd').setup()
-    require('ctvim/plugins').setup()
-    require('ctvim/keymap').setup()
-end
+require('ctvim/lazy')
 
-return {
-  setup = setup
-}
+-- Set leader bindings
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
+require('lazy').setup({
+    spec = {
+        { import = 'ctvim/plugins' },
+    },
+})
+
+require('ctvim/options')
+require('ctvim/mappings')

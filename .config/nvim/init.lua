@@ -1,1 +1,1 @@
-require('ctvim').setup()
+require('ctvim')

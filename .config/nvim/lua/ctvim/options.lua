@@ -1,40 +1,20 @@
-local options = {
-    opt = {
-        -- Indentation
-        expandtab = true,
-        smartindent = true,
-        shiftwidth = 4,
-        tabstop = 4,
-        softtabstop = 4,
+local opt = vim.opt
+local o = vim.o
+local g = vim.g
 
-        -- Line numbers
-        number = true,
+-- Indentation
+o.expandtab = true
+o.smartindent = true
+o.shiftwidth = 4
+o.tabstop = 4
+o.softtabstop = 4
 
-        -- Misc
-        mouse = 'a',
-        
-        termguicolors = true,
-    
-        timeoutlen = 500 -- Timeout before whichkey opens
-    },
-    g = {
-        -- Disable netrw (replace with nvim-tree)
-        loaded_netrw = 1,
-        loaded_netrwPlugin = 1,
-    },
-    t = {
+o.list = true
+o.showbreak = '↪ '
+opt.listchars = { tab = '→ ', trail = '•', extends = '⟩', precedes = '⟨', nbsp = '␣' }
 
-    },
-}
+o.number = true
 
-local function setup()
-    for scope, table in pairs(options) do
-        for setting, value in pairs(table) do
-            vim[scope][setting] = value
-        end
-    end
-end
+o.mouse = 'a'
 
-return {
-    setup = setup
-}
+o.termguicolors = true
