@@ -9,8 +9,11 @@ error_symbol = "[✗](bold red) "
 ssh_symbol = " "
 
 [aws]
-symbol = " "
 format = '\[[$symbol($profile )(\($region\) )(\[$duration\] )]($style)\]'
+symbol = " "
+
+[c]
+format = '\[[$symbol($version(-$name))]($style)\]'
 
 [git_branch]
 format = '\[[$symbol$branch]($style)\]'
@@ -35,6 +38,7 @@ symbol = " "
 pyenv_version_name = true
 pyenv_prefix = "~"
 python_binary = "python3"
+detect_env_vars = ["VIRTUAL_ENV", "PYENV_VERSION"]
 
 [lua]
 disabled = true
@@ -48,8 +52,11 @@ format = '\[[$symbol($version)]($style)\]'
 symbol = " "
 
 [terraform]
-format = '\[[$symbol$workspace]($style)\]'
-symbol = "tf:"
+format = '\[[$symbol($workspace)]($style)\]'
+symbol = "󱁢 "
+
+[vagrant]
+format = '\[[$symbol($version)]($style)\]'
 
 [os.symbols]
 Arch = " "
