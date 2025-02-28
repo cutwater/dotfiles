@@ -35,23 +35,15 @@ return {
         end,
     },
     {
-        'folke/which-key.nvim',
-        keys = { '<leader>', },
-        cmd = 'WhichKey',
-        opts = {},
-        init = function()
-            vim.o.timeout = true
-            vim.o.timeoutlen = 300
-        end,
-        config = function(_, opts)
-            local wk = require('which-key')
-            wk.setup(opts)
-            wk.register({
-                b = { name = 'Buffers' },
-                f = { name = 'Find' },
-                g = { name = 'Git' },
-            }, { prefix="<leader>" })
-        end,
+        "folke/which-key.nvim",
+        event = "VeryLazy",
+        opts = {
+            spec = {
+                { '<leader>b', group = 'Buffers' },
+                { '<leader>f', group = 'Find' },
+                { '<leader>g', group = 'Git' },
+            },
+        },
     },
     {
         'nvim-telescope/telescope.nvim',
