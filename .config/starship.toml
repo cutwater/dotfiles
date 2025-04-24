@@ -29,6 +29,10 @@ symbol = " "
 [helm]
 format = '\[[$symbol($version)]($style)\]'
 
+[kubernetes]
+format = '\[[$symbol $context(\($namespace\))]($style)\]'
+disabled = false
+
 [nodejs]
 format = '\[[$symbol($version)]($style)\]'
 
