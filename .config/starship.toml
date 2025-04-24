@@ -9,7 +9,7 @@ error_symbol = "[✗](bold red) "
 ssh_symbol = " "
 
 [aws]
-format = '\[[$symbol($profile )(\($region\) )(\[$duration\] )]($style)\]'
+format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 symbol = " "
 
 [c]
