@@ -1,3 +1,7 @@
 # vim: ft=zsh
 
-autoload -U compinit && compinit
+autoload -Uz compinit && compinit
+autoload -Uz bashcompinit && bashcompinit
+
+# aws
+command -v aws_completer &>/dev/null && complete -C aws_completer aws
