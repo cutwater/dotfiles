@@ -1,8 +1,8 @@
-require('ctvim/lazy')
-
 -- Set leader bindings
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+vim.g.mapleader = "\\"
+
+-- Install lazy.nvim if not installed already
+require('ctvim/lazy')
 
 require('lazy').setup({
     spec = {
