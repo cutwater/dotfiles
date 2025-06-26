@@ -8,19 +8,17 @@ if hash gpg &>/dev/null; then
     export GPG_TTY=$(tty)
 fi
 
-PATH_DIRS=()
-
-# Rust
-PATH_DIRS+=("$HOME/.cargo/bin")
-
-# Yarn
-PATH_DIRS+=(
-    "$HOME/.yarn/bin"
-    "$HOME/.config/yarn/global/node_modules/.bin"
+PATH_DIRS=(
+    # Common
+    "$HOME/.local/bin"
+    # Rust
+    "$HOME/.cargo/bin"
+    # Pyenv
+    "$HOME/.pyenv/bin"
+    # Yarn (disabled)
+    # "$HOME/.yarn/bin"
+    # "$HOME/.config/yarn/global/node_modules/.bin"
 )
-
-# Pyenv
-PATH_DIRS+=("$HOME/.pyenv/bin")
 
 if [[ "$PLATFORM" == 'macos' ]]; then
 
@@ -39,7 +37,7 @@ elif [[ "$PLATFORM" == 'linux' ]]; then
     # Use system qemu
     export LIBVIRT_DEFAULT_URI="qemu:///system"
 
-    PATH_DIRS+=("/opt/bin" "$HOME/.local/bin")
+    PATH_DIRS+=("/opt/bin")
 
     if [[ -f "$HOME/.dircolors" ]]; then
         eval "$(dircolors -b $HOME/.dircolors)"

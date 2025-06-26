@@ -1,12 +1,13 @@
 # vim: ft=zsh
 
-PLATFORM='unknown'
-
 case $(uname) in
     Linux)
         PLATFORM='linux'
         ;;
     Darwin)
         PLATFORM='macos'
+        ;;
+    *)
+        PLATFORM='unknown'
         ;;
 esac
