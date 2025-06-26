@@ -1,14 +1,10 @@
 # vim: ft=zsh
 
 export EDITOR=nvim
+
 export PAGER=less
 
-# Set GPG_TTY if gpg is installed
-if hash gpg &>/dev/null; then
-    export GPG_TTY=$(tty)
-fi
-
-PATH_DIRS=(
+_zshrc_path=(
     # Common
     "$HOME/.local/bin"
     # Rust
@@ -20,24 +16,24 @@ PATH_DIRS=(
     # "$HOME/.config/yarn/global/node_modules/.bin"
 )
 
-if [[ "$PLATFORM" == 'macos' ]]; then
+if [[ "$_zshrc_platform" == 'macos' ]]; then
 
-    if [[ -f /usr/libxexec/java_home ]]; then
+    if [[ -f '/usr/libxexec/java_home' ]]; then
         export JAVA_HOME=$(/usr/libexec/java_home)
     fi
 
-    export LSCOLORS=GxFxCxDxBxegedabagaced
+    export LSCOLORS='GxFxCxDxBxegedabagaced'
 
     eval "$(/opt/homebrew/bin/brew shellenv)"
 
-elif [[ "$PLATFORM" == 'linux' ]]; then
+elif [[ "$_zshrc_platform" == 'linux' ]]; then
     # export LANGUAGE=en_US:en
     export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 
     # Use system qemu
     export LIBVIRT_DEFAULT_URI="qemu:///system"
 
-    PATH_DIRS+=("/opt/bin")
+    _zshrc_path+=("/opt/bin")
 
     if [[ -f "$HOME/.dircolors" ]]; then
         eval "$(dircolors -b $HOME/.dircolors)"
@@ -45,15 +41,20 @@ elif [[ "$PLATFORM" == 'linux' ]]; then
 fi
 
 # Add PATH_DIRS to PATH
-for dir in $PATH_DIRS; do
-    if [[ -d "$dir" && "${PATH#*$dir}" == "$PATH" ]]; then
-        PATH="$dir:$PATH"
+for _dir in $_zshrc_path; do
+    if [[ -d "$_dir" && "${PATH#*$_dir}" == "$PATH" ]]; then
+        PATH="$_dir:$PATH"
     fi
 done
 export PATH
 
-unset dir
-unset PATH_DIRS
+unset _dir
+unset _zshrc_path
+
+# Set GPG_TTY if gpg is installed
+if hash gpg &>/dev/null; then
+    export GPG_TTY=$(tty)
+fi
 
 # PyEnv
 if command -v pyenv &>/dev/null; then

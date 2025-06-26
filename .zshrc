@@ -15,3 +15,5 @@ source "$HOME/.zsh/prompt.zsh"
 if [[ -f "$HOME/.zshrc.local" ]]; then
     source "$HOME/.zshrc.local"
 fi
+
+source "$HOME/.zsh/cleanup.zsh"

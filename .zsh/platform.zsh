@@ -2,12 +2,12 @@
 
 case $(uname) in
     Linux)
-        PLATFORM='linux'
+        _zshrc_platform='linux'
         ;;
     Darwin)
-        PLATFORM='macos'
+        _zshrc_platform='macos'
         ;;
     *)
-        PLATFORM='unknown'
+        _zshrc_platform='unknown'
         ;;
 esac

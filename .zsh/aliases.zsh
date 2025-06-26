@@ -1,10 +1,10 @@
 # vim: ft=zsh
 
 ## ls
-if [[ "$PLATFORM" == "linux" ]]; then
+if [[ "$_zshrc_platform" == "linux" ]]; then
     alias open='xdg-open'
     alias ls='ls --color=auto --group-directories-first'
-elif [[ "$PLATFORM" == 'macos' ]]; then
+elif [[ "$_zshrc_platform" == 'macos' ]]; then
     alias ls='ls -G'
 fi
 
