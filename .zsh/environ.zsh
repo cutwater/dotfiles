@@ -11,6 +11,8 @@ _zshrc_path=(
     "$HOME/.cargo/bin"
     # Pyenv
     "$HOME/.pyenv/bin"
+    # Krew
+    "$HOME/.krew/bin"
 )
 
 if [[ "$_zshrc_platform" == 'macos' ]]; then
