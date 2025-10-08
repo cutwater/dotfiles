@@ -15,7 +15,7 @@ fi
 alias ll='ls -l'
 alias la='ls -la'
 
-alias exa='exa --group-directories-first'
+alias eza='eza --group-directories-first'
 
 ## SSH
 alias ssh-nocheck='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
