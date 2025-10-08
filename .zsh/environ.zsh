@@ -11,29 +11,25 @@ _zshrc_path=(
     "$HOME/.cargo/bin"
     # Pyenv
     "$HOME/.pyenv/bin"
-    # Yarn (disabled)
-    # "$HOME/.yarn/bin"
-    # "$HOME/.config/yarn/global/node_modules/.bin"
 )
 
 if [[ "$_zshrc_platform" == 'macos' ]]; then
+    _zshrc_path+="/opt/homebrew/opt/rustup/bin"
+
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+
+    export LSCOLORS='GxFxCxDxBxegedabagaced'
 
     if [[ -f '/usr/libxexec/java_home' ]]; then
         export JAVA_HOME=$(/usr/libexec/java_home)
     fi
-
-    export LSCOLORS='GxFxCxDxBxegedabagaced'
-
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-
 elif [[ "$_zshrc_platform" == 'linux' ]]; then
+    _zshrc_path+="/opt/bin"
+
     # export LANGUAGE=en_US:en
     export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
-
     # Use system qemu
     export LIBVIRT_DEFAULT_URI="qemu:///system"
-
-    _zshrc_path+=("/opt/bin")
 
     if [[ -f "$HOME/.dircolors" ]]; then
         eval "$(dircolors -b $HOME/.dircolors)"
