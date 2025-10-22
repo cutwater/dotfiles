@@ -8,6 +8,9 @@ require('lazy').setup({
     spec = {
         { import = 'ctvim/plugins' },
     },
+    rocks = {
+        enabled = false,
+    },
 })
 
 require('ctvim/options')
