@@ -10,7 +10,17 @@ autoload -Uz compinit && compinit
 autoload -Uz bashcompinit && bashcompinit
 
 # aws
-command -v aws_completer &>/dev/null && complete -C aws_completer aws
+if command -v aws_completer &>/dev/null; then
+    complete -C aws_completer aws
+fi
 
 # kubectl
-command -v kubectl &>/dev/null && source <(kubectl completion zsh)
+if command -v kubectl &>/dev/null; then
+    source <(kubectl completion zsh)
+fi
+
+# fzf
+if command -v fzf &>/dev/null; then
+    eval "$(fzf --zsh)"
+    bindkey '^F' fzf-cd-widget
+fi
