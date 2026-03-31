@@ -3,8 +3,8 @@
 # Use emacs key bindings
 bindkey -e
 
-bindkey "^[[1;5D" backward-word             # [Ctrl-RightArrow] - move forward one word
-bindkey "^[[1;5C" forward-word              # [Ctrl-LeftArrow] - move backward one word
+bindkey "^[[1;5D" backward-word             # [Ctrl-LeftArrow] - move backward one word
+bindkey "^[[1;5C" forward-word              # [Ctrl-RightArrow] - move forward one word
 
 bindkey '^?' backward-delete-char               # [Backspace] - delete backward
 if [[ "${terminfo[kdch1]}" != "" ]]; then       # [Delete] - delete forward
