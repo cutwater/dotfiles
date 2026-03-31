@@ -21,10 +21,6 @@ if [[ "$_zshrc_platform" == 'macos' ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 
     export LSCOLORS='GxFxCxDxBxegedabagaced'
-
-    if [[ -f '/usr/libxexec/java_home' ]]; then
-        export JAVA_HOME=$(/usr/libexec/java_home)
-    fi
 elif [[ "$_zshrc_platform" == 'linux' ]]; then
     _zshrc_path+="/opt/bin"
 
