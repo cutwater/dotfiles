@@ -6,7 +6,13 @@ if [[ "$_zshrc_platform" == 'macos'
   fpath+=/opt/homebrew/opt/rustup/share/zsh/site-functions
 fi
 
-autoload -Uz compinit && compinit
+autoload -Uz compinit
+if [[ $(date +%j) != $(date -r "$HOME/.zcompdump" +%j 2>/dev/null) ]]; then
+    compinit
+else
+    compinit -C
+fi
+
 autoload -Uz bashcompinit && bashcompinit
 
 # aws
