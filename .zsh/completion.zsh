@@ -11,3 +11,6 @@ autoload -Uz bashcompinit && bashcompinit
 
 # aws
 command -v aws_completer &>/dev/null && complete -C aws_completer aws
+
+# kubectl
+command -v kubectl &>/dev/null && source <(kubectl completion zsh)
