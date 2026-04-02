@@ -16,6 +16,9 @@ o.relativenumber = true
 
 o.showtabline = 2
 
+o.list = true
+opt.listchars = { tab = "→ ", trail = "·", nbsp = "␣" }
+
 -- Providers
 g.loaded_node_provider = 0
 g.loaded_perl_provider = 0
