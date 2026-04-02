@@ -29,6 +29,10 @@ g.loaded_ruby_provider = 0
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*",
   callback = function()
+    local ec = vim.b.editorconfig
+    if ec and ec.trim_trailing_whitespace == "false" then
+      return
+    end
     local pos = vim.api.nvim_win_get_cursor(0)
     vim.cmd([[%s/\s\+$//e]])
     vim.api.nvim_win_set_cursor(0, pos)
