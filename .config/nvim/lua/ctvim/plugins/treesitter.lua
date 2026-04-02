@@ -1,13 +1,26 @@
+-- References:
+--   1. https://mhpark.me/posts/update-treesitter-main/
+
 return {
   'nvim-treesitter/nvim-treesitter',
+  branch = 'main',
+  lazy = false,
   build = ":TSUpdate",
   config = function ()
-    require("nvim-treesitter.configs").setup({
-      ensure_installed = { 'bash', 'go', 'hcl', 'json', 'lua', 'markdown', 'python', 'rust', 'toml', 'yaml' },
-      ignore_install = { 'all' },
-      sync_install = false,
-      indent = { enable = true },
-      highlight = { enable = true },
-    })
+    local ts = require("nvim-treesitter")
+    local parsers = {
+      'bash',
+      'go',
+      'hcl',
+      'json',
+      'lua',
+      'markdown',
+      'python',
+      'rust',
+      'toml',
+      'yaml',
+    }
+
+    ts.install(parsers)
   end
 }
