@@ -79,7 +79,8 @@ format = '\[[$symbol($version(-$name))]($style)\]'
 
 # [cmake]
 
-# [golang]
+[golang]
+format = '\[[$symbol($version)]($style)\]'
 
 [helm]
 format = '\[[$symbol($version)]($style)\]'
