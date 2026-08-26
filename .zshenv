@@ -6,8 +6,3 @@
 # environment variables.
 # '.zshenv' should not contain commands that produce output
 # or assume the shell is attached to a tty.
-
-export GOBIN="$HOME/.local/bin"
-export GOPATH="$HOME/.local/share/go"
-export GOMODCACHE="$HOME/.cache/go/mod"
-export GOCACHE="$HOME/.cache/go/build"

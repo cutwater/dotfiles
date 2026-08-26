@@ -65,3 +65,11 @@ if command -v pyenv &>/dev/null; then
     eval "$(pyenv init --path)"
     eval "$(pyenv init -)"
 fi
+
+# Go
+if command -v go &>/dev/null; then
+    export GOBIN="$HOME/.local/bin"
+    export GOPATH="$HOME/.local/share/go"
+    export GOMODCACHE="$HOME/.cache/go/mod"
+    export GOCACHE="$HOME/.cache/go/build"
+fi
