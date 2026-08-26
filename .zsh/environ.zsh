@@ -1,7 +1,6 @@
 # vim: ft=zsh
 
 export EDITOR=nvim
-
 export PAGER=less
 
 _zshrc_path=(
@@ -15,35 +14,45 @@ _zshrc_path=(
     "$HOME/.krew/bin"
 )
 
-if [[ "$_zshrc_platform" == 'macos' ]]; then
-    _zshrc_path+="/opt/homebrew/opt/rustup/bin"
+case "$_zshrc_platform" in
+    macos)
+        _zshrc_path+=(
+            # Rustup
+            "/opt/homebrew/opt/rustup/bin"
+            # JetBrains Toolbox
+            "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
+        )
 
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+        eval "$(/opt/homebrew/bin/brew shellenv)"
 
-    export LSCOLORS='GxFxCxDxBxegedabagaced'
-elif [[ "$_zshrc_platform" == 'linux' ]]; then
-    _zshrc_path+="/opt/bin"
+        export LSCOLORS='GxFxCxDxBxegedabagaced'
+    ;;
+    linux)
+        _zshrc_path+=("/opt/bin")
 
-    # export LANGUAGE=en_US:en
-    export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
-    # Use system qemu
-    export LIBVIRT_DEFAULT_URI="qemu:///system"
+        # export LANGUAGE=en_US:en
+        export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
+        # Use system qemu
+        export LIBVIRT_DEFAULT_URI="qemu:///system"
 
-    if [[ -f "$HOME/.dircolors" ]]; then
-        eval "$(dircolors -b $HOME/.dircolors)"
-    fi
-fi
+        if [[ -f "$HOME/.dircolors" ]]; then
+            eval "$(dircolors -b $HOME/.dircolors)"
+        fi
+    ;;
+esac
 
-# Add PATH_DIRS to PATH
-for _dir in $_zshrc_path; do
-    if [[ -d "$_dir" && "${PATH#*$_dir}" == "$PATH" ]]; then
-        PATH="$_dir:$PATH"
-    fi
+# Construct PATH
+typeset -U path PATH
+
+_zshrc_path+=($path)
+_zshrc_existing=()
+
+for _dir in "${_zshrc_path[@]}"; do
+    [[ -d "$_dir" ]] && _zshrc_existing+=("$_dir")
 done
-export PATH
 
-unset _dir
-unset _zshrc_path
+path=($_zshrc_existing)
+unset _dir _zshrc_path _zshrc_existing
 
 # Set GPG_TTY if gpg is installed
 if hash gpg &>/dev/null; then
